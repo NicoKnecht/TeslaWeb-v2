@@ -5,27 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/contact.css">
+
     <script src="https://kit.fontawesome.com/8d2a6304f1.js" crossorigin="anonymous"></script>
     <title>Careers</title>
 </head>
 
 <body>
     <!--Comienzo Menu-->
+    <!--Comienzo Menu-->
     <header class="headerContainer">
-        <!--HACER DINAMICO CON JS-->
         <nav class="navWrapper">
             <div class="navLogo">
                 <a href="index.html"><img src="img/tesla.png" alt="logo tesla"></a>
             </div>
             <a class="navBurguerMenu" href="#"><i class="fas fa-bars btnBurguer"></i></a>
             <ul class="navMenuWrapper ">
-                <li class="item itemCareers">
-                    <a href="careers.html">CARRERAS</a>
+                <li class="navItem navItemCareers">
+                    <a class="navLink" class="" href="careers.html">CARRERAS</a>
                     <ul class="careersList">
                         <li class="career">
                             <a href="#">Metematicas</a>
@@ -47,8 +46,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="item itemCourses">
-                    <a href="courses.html">CURSOS</a>
+                <li class="navItem navItemCourses">
+                    <a class="navLink" href="courses.html">CURSOS</a>
                     <ul class="coursesList">
                         <li class="course">
                             <a href="#">Front-end</a>
@@ -70,35 +69,36 @@
                         </li>
                     </ul>
                 </li>
-                <li class="item">
-                    <a href="noDisponible.html">INSTITUCIONAL</a>
+                <li class="navItem">
+                    <a class="navLink" href="inConstruction.html">INSTITUCIONAL</a>
                 </li>
-                <li class="item">
-                    <a href="noDisponible.html">EVENTOS</a>
+                <li class="navItem">
+                    <a class="navLink" href="inConstruction.html">EVENTOS</a>
                 </li>
-                <li class="item">
-                    <a href="noDisponible.html">BLOG</a>
+                <li class="navItem">
+                    <a class="navLink" href="inConstruction.html">BLOG</a>
                 </li>
-                <li class="item ">
-                    <a href="contact.html">CONTACTO</a>
+                <li class="navItem ">
+                    <a class="navLink" href="contact.html">CONTACTO</a>
                 </li>
-                <li class="item enter">
-                    <a href="#">Ingresá</a>
+                <li class="navItem enter">
+                    <a class="navLink" href="inConstruction.html">Ingresá</a>
                 </li>
-                <li class="item login">
-                    <a class="lastItem" href="#">Registrate</a>
+                <li class="navItem login">
+                    <a class="navLink" class="lastItem" href="inConstruction.html">Registrate</a>
                 </li>
             </ul>
         </nav>
     </header>
     <!--Main-->
-    <main class="mainContainer">
+    <main class="mainContainerContact">
+        <h2 class="mainTitle">consultanos</h2>
         <div class="mainWrapper">
             <!--networks-->
             <div class="netWrapper">
-                <a href="" class="netlLnk">
+                <a href="" class="netLink">
                     <div class="netLogo">
-                        <img src="https://image.flaticon.com/icons/png/512/356/356045.png" alt="Logo LinkedIn">
+                        <img class="logo" src="img/linkedin (2).png" alt="Logo LinkedIn">
                     </div>
                     <div class="netText">
                         <p>
@@ -108,7 +108,7 @@
                 </a>
                 <a href="" class="netLink">
                     <div class="netLogo">
-                        <img src="https://image.flaticon.com/icons/png/512/2111/2111342.png" alt="Logo Facebook">
+                        <img class="logo" src="img/facebook.png" alt="Logo Facebook">
                     </div>
                     <div class="netText">
                         <p>
@@ -118,7 +118,7 @@
                 </a>
                 <a href="" class="netLink">
                     <div class="netLogo">
-                        <img src="https://image.flaticon.com/icons/png/512/2111/2111421.png" alt="Logo Instagram">
+                        <img class="logo" src="img/instagram.png" alt="Logo Instagram">
                     </div>
                     <div class="netText">
                         <p>
@@ -128,7 +128,7 @@
                 </a>
                 <a href="" class="netLink">
                     <div class="netLogo">
-                        <img src="https://image.flaticon.com/icons/png/512/889/889242.png" alt="Logo Youtube">
+                        <img class="logo" src="img/youtube.png" alt="Logo Youtube">
                     </div>
                     <div class="netText">
                         <p>
@@ -138,7 +138,7 @@
                 </a>
                 <a href="" class="netLink">
                     <div class="netLogo">
-                        <img src="https://image.flaticon.com/icons/png/512/2111/2111310.png" alt="Logo Discord">
+                        <img class="logo" src="img/discord.png" alt="Logo Discord">
                     </div>
                     <div class="netText">
                         <p>
@@ -162,48 +162,50 @@
                         <p class="pIn">Dejanos tu mensaje</p>
                         <textarea class="textarea" name="" id="" cols="" rows=""></textarea>
                     </div>
+                    <div class="submitWrapper">
+                        <button type="submit" class="btnSubmit"><a href="#">Enviar</a></button>
+                    </div>
                 </div>
 
-                <div class="submitWraper">
-                    <button type="submit" class="btnSubmit"><a href="#">Enviar</a></button>
-                </div>
+
 
             </div>
         </div>
         </section>
-        <!-- Footer-->
-        <footer class="footer">
-            <div class="logoLocationWrapper">
-                <a href="index.html" class="logoFooterLink">
-                    <img src="img/tesla2.png" alt="logo tesla footer" class="logoFooter">
-                </a>
-                <p class="legal">©2021 TESLA</p>
-                <a class="locationWrapper" href="https://goo.gl/maps/kPQ1UhNFViuuuidS8" target="_blank">
-                    <img class="mapIcon" src="img/mapa.png" alt="icono de mapa">
-                    <p class="location">Calle falsa 123/9 - CABA</p>
-                </a>
-            </div>
-            <div class="redesWrapper">
-                <a class="linkImg" href="https://discord.com/" target="_blank">
-                    <img class="netImg" src="img/discord.png" alt="logo discord">
-                </a>
-                <a class=" linkImg" href="https://www.linkedin.com/" target="_blank">
-                    <img class="netImg" src="img/linkedin (2).png" alt="linkedin logo">
-                </a>
-                <a class="linkImg" href="https://www.facebook.com/" target="_blank">
-                    <img class="netImg" src="img/facebook.png" alt="facebook logo">
-                </a>
-                <a class="linkImg" href="https://www.instagram.com/" target="_blank">
-                    <img class="netImg" src="img/instagram.png" alt="instagram logo">
-                </a>
-                <a class="linkImg" href="https://www.youtube.com/" target="_blank">
-                    <img class="netImg" src="img/youtube.png" alt="youtube logo">
-                </a>
+
     </main>
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="logoLocationWrapper">
+            <a href="index.html" class="logoFooterLink">
+                <img src="img/tesla2.png" alt="logo tesla footer" class="logoFooter">
+            </a>
+            <p class="legal">©2021 TESLA</p>
+            <a class="locationWrapper" href="https://goo.gl/maps/kPQ1UhNFViuuuidS8" target="_blank">
+                <img class="mapIcon" src="img/mapa.png" alt="icono de mapa">
+                <p class="location">Calle falsa 123/9 - CABA</p>
+            </a>
+        </div>
+        <div class="redesWrapper">
+            <a class="linkImg" href="https://discord.com/" target="_blank">
+                <img class="netImg" src="img/discord.png" alt="logo discord">
+            </a>
+            <a class=" linkImg" href="https://www.linkedin.com/" target="_blank">
+                <img class="netImg" src="img/linkedin (2).png" alt="linkedin logo">
+            </a>
+            <a class="linkImg" href="https://www.facebook.com/" target="_blank">
+                <img class="netImg" src="img/facebook.png" alt="facebook logo">
+            </a>
+            <a class="linkImg" href="https://www.instagram.com/" target="_blank">
+                <img class="netImg" src="img/instagram.png" alt="instagram logo">
+            </a>
+            <a class="linkImg" href="https://www.youtube.com/" target="_blank">
+                <img class="netImg" src="img/youtube.png" alt="youtube logo">
+            </a>
+        </div>
 
 
     </footer>
-
     <!--Final Footer-->
 </body>
 

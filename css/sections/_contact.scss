@@ -1,0 +1,119 @@
+@use "../base/gral-styles" as *;
+.mainContainerContact {
+    padding: $gral-padding;
+    // height: 90vh;
+    @include center(column);
+    @media screen and (max-width: 1024px) {
+        padding: $mobile-padding;
+    }
+    .mainTitle {
+        padding: 2%;
+        text-transform: uppercase;
+    }
+    .mainWrapper {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .netWrapper {
+            display: flex;
+            flex-direction: column;
+            @media screen and (max-width: 1024px) {
+                display: flex;
+                flex-direction: row;
+            }
+            @media screen and (max-width: 768px) {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
+            }
+
+            .netLink {
+                display: flex;
+                margin-bottom: 10%;
+                @media screen and (max-width: 1024px) {
+                    margin-top: 10%;
+                }
+                @media screen and (max-width: 768px) {
+                    margin-top: 0%;
+                }
+                .netLogo {
+                    width: 25%;
+                    .logo {
+                        width: 100%;
+                    }
+                }
+                .netText {
+                    @include center(row);
+                    margin-left: 1rem;
+                    color: $gral-white;
+                    font-weight: 600;
+                }
+            }
+        }
+        .formContainer {
+            .formInputsWrapper {
+                display: grid;
+                grid-template: 1fr 1fr 4fr 1fr/ 1fr;
+                gap: 1rem;
+                width: 100%;
+
+                .namesWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
+                    @media screen and (max-width: 1024px) {
+                        grid-template-columns: repeat(auto-fill, minmax(50%, 100%));
+                    }
+                    .inputName {
+                        margin: 2%;
+                    }
+                    .inputLastName {
+                        margin: 2%;
+                    }
+                }
+                .mailPhoneWrapper {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
+                    @media screen and (max-width: 1024px) {
+                        grid-template-columns: repeat(auto-fill, minmax(50%, 100%));
+                    }
+                    .inputMail {
+                        margin: 2%;
+                    }
+                    .inputPhone {
+                        margin: 2%;
+                    }
+                }
+                .inputTextArea {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 2%;
+                    @media screen and (max-width: 1024px) {
+                        margin: 0;
+                    }
+
+                    .pIn {
+                        margin-bottom: 1%;
+                    }
+                    .textarea {
+                        display: flex;
+                        flex-grow: 1;
+                    }
+                }
+                .submitWrapper {
+                    display: flex;
+                    margin: 0% 0% 2% 2%;
+                    .btnSubmit {
+                        @include btn(1% 5%, 1.2rem);
+                        border-radius: 10px;
+
+                        a {
+                            color: $gral-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 * {
-    // border: solid red 1px;
+    border: solid red 1px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,7 +41,7 @@ $snd-black: #454545;
 
     &:hover {
         background-color: #a80070;
-        border: #a80070;
+        // border: #a80070;
         transition: all 0.3s ease-in-out;
     }
     &:active {
