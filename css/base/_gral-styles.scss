@@ -1,13 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 * {
-    border: solid red 1px;
+    // border: solid red 1px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
     font-family: "roboto", sans-serif;
+  
+}
+
+body {
+    
+    background: linear-gradient(4deg, rgba(82, 37, 189, 1) 29%, rgba(0, 0, 0, 1) 100%);
+    padding-top: 6.5%;
+    @media screen and (max-width: 768px) {
+        padding-top: 10%;
+    }
+    color: #f6f2f5;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+a:active {
+    text-decoration: none;
+    color: white;
 }
 
 //variables css
@@ -16,6 +36,7 @@ $mobile-padding: 1% 2% 1% 2%;
 $gral-margin: 5% 0% 5% 0%;
 $gral-white: #f0f0f0;
 $gral-magenta: #d2008d;
+$gral-violet: 	#5225BD;
 $gral-black: #080808;
 $snd-black: #454545;
 
@@ -38,7 +59,7 @@ $snd-black: #454545;
         rgba(242, 34, 173, 0.23012955182072825) 67%
     );
     box-shadow: 0px 3px 29px 1px rgba(0, 0, 0, 1);
-
+    color: white;
     &:hover {
         background-color: #a80070;
         // border: #a80070;
@@ -54,11 +75,3 @@ $snd-black: #454545;
     }
 }
 
-body {
-    background: linear-gradient(4deg, rgba(82, 37, 189, 1) 29%, rgba(0, 0, 0, 1) 100%);
-    padding-top: 6.5%;
-    @media screen and (max-width: 768px) {
-        padding-top: 10%;
-    }
-    color: #f6f2f5;
-}

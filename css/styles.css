@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
-  /* border: solid red 1px; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(4deg, #5225bd 29%, black 100%);
+  background: linear-gradient(4deg, rgb(82, 37, 189) 29%, rgb(0, 0, 0) 100%);
   padding-top: 6.5%;
   color: #f6f2f5;
 }
@@ -18,6 +17,16 @@ body {
   body {
     padding-top: 10%;
   }
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: white;
 }
 
 /* HEADER */
@@ -63,7 +72,7 @@ body {
   }
 }
 .headerContainer .navWrapper .navLogo:hover {
-  box-shadow: -1px -4px 35px -16px white;
+  box-shadow: -1px -4px 35px -16px rgb(255, 255, 255);
   transition: ease 0.5s;
   transform: scale(1.05, 1.05);
 }
@@ -87,12 +96,12 @@ body {
 }
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navBurguerMenu .btnBurguer {
-    font-size: 8vw;
+    font-size: 9vw;
   }
 }
 @media all and (max-width: 480px) {
   .headerContainer .navWrapper .navBurguerMenu .btnBurguer {
-    font-size: 9vw;
+    font-size: 10vw;
   }
 }
 .headerContainer .navWrapper .navMenuWrapper {
@@ -139,7 +148,7 @@ body {
 }
 @media all and (max-width: 480px) {
   .headerContainer .navWrapper .navMenuWrapper .navItem .navLink {
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   }
 }
 @media all and (max-width: 1024px) {
@@ -208,9 +217,14 @@ body {
     position: fixed;
     top: 0;
     left: 0px;
-    height: 80vh;
+    height: 85vh;
     padding: 10% 0% 0% 0%;
-    background: linear-gradient(180deg, #5225bd 0%, #8d78c1 64%, rgba(196, 196, 196, 0.9080007003) 99%);
+    background: linear-gradient(180deg, rgb(82, 37, 189) 0%, rgb(141, 120, 193) 64%, rgba(123, 120, 120, 0.877) 99%);
+  }
+}
+@media all and (max-width: 480px) {
+  .headerContainer .navWrapper .navMenuWrapper.open {
+    height: 65vh;
   }
 }
 
@@ -353,12 +367,7 @@ body .mainWrapper .heroWrapper .heroTitle {
 body .mainWrapper .heroWrapper .heroTitle .title {
   font-size: 2.6rem;
   padding-left: 1rem;
-  background: linear-gradient(
-    79deg,
-    rgba(168, 0, 112, 0.5662640056) 20%,
-    rgba(242, 34, 173, 0.4682247899) 40%,
-    rgba(255, 255, 255, 0.0396533613) 85%
-  );
+  background: linear-gradient(79deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.4682247899) 40%, rgba(255, 255, 255, 0.0396533613) 85%);
 }
 @media screen and (max-width: 480px) {
   body .mainWrapper .heroWrapper .heroTitle .title {
@@ -370,12 +379,7 @@ body .mainWrapper .heroDescription {
   padding-left: 1rem;
   max-width: 60%;
   line-height: 1.5rem;
-  background: linear-gradient(
-    79deg,
-    rgba(168, 0, 112, 0.5662640056) 20%,
-    rgba(242, 34, 173, 0.4682247899) 40%,
-    rgba(255, 255, 255, 0.0396533613) 85%
-  );
+  background: linear-gradient(79deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.4682247899) 40%, rgba(255, 255, 255, 0.0396533613) 85%);
 }
 @media screen and (max-width: 768px) {
   body .mainWrapper .heroDescription {
@@ -392,7 +396,8 @@ body .mainWrapper .btnCoursesCareers {
   padding: 1% 10% 1% 10%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  column-gap: 10%;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
   row-gap: 5%;
   margin: 5% 0% 5% 0%;
 }
@@ -407,7 +412,8 @@ body .mainWrapper .btnCoursesCareers .courses .btn {
   padding: 12% 8%;
   border: black 1px solid;
   background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.2301295518) 67%);
-  box-shadow: 0px 3px 29px 1px black;
+  box-shadow: 0px 3px 29px 1px rgb(0, 0, 0);
+  color: white;
 }
 body .mainWrapper .btnCoursesCareers .careers .btn:hover,
 body .mainWrapper .btnCoursesCareers .courses .btn:hover {
@@ -435,6 +441,7 @@ body .mainWrapper .bannerContainer {
   body .mainWrapper .bannerContainer {
     height: 60vh;
     padding: 0;
+    height: -moz-fit-content;
     height: fit-content;
     position: static;
   }
@@ -478,7 +485,8 @@ body .mainWrapper .bannerContainer .bannerWrapper .banner:target {
 }
 body .mainWrapper .bannerContainer .bannerWrapper .banner .bannerLink .bannerImg {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0px 8px 28px 4px #000;
 }
 body .mainWrapper .bannerContainer .menu {
@@ -499,7 +507,7 @@ body .mainWrapper .bannerContainer .menu li {
 }
 body .mainWrapper .bannerContainer .menu li a {
   display: inline-block;
-  background-color: #f7f4f4;
+  background-color: rgb(247, 244, 244);
   width: 1.8vw;
   height: 1.8vw;
   font-size: 1.5vw;
@@ -555,7 +563,8 @@ body .mainWrapper .blogButtonWrapper .blogButton .btn {
   padding: 2% 0%;
   border: black 1px solid;
   background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.2301295518) 67%);
-  box-shadow: 0px 3px 29px 1px black;
+  box-shadow: 0px 3px 29px 1px rgb(0, 0, 0);
+  color: white;
   font-weight: 600;
 }
 body .mainWrapper .blogButtonWrapper .blogButton .btn:hover {
@@ -619,7 +628,8 @@ body .mainWrapper .brandsContainer .brandsWrapper {
   background-color: #f6f2f5;
   padding: 0% 1% 5% 1%;
   display: grid;
-  grid-template: 1fr 2fr 2fr / repeat(5, 2fr);
+  grid-template: 1fr 2fr 2fr/repeat(5, 2fr);
+  grid-template-columns: -webkit-fill-available;
   grid-template-columns: fill;
   gap: 1%;
   align-items: center;
@@ -732,7 +742,8 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 .careerContainer .careerWrapper .buttonsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  column-gap: 10%;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
   row-gap: 5%;
   margin: 5% 0% 5% 0%;
 }
@@ -746,7 +757,8 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   padding: 8% 5%;
   border: black 1px solid;
   background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.2301295518) 67%);
-  box-shadow: 0px 3px 29px 1px black;
+  box-shadow: 0px 3px 29px 1px rgb(0, 0, 0);
+  color: white;
 }
 .careerContainer .careerWrapper .buttonsContainer .buttonsWrapper .button:hover {
   background-color: #a80070;
@@ -852,7 +864,8 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 .courseContainer .courseWrapper .buttonsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  column-gap: 10%;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
   row-gap: 5%;
   margin: 5% 0% 5% 0%;
 }
@@ -866,7 +879,8 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   padding: 8% 5%;
   border: black 1px solid;
   background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.2301295518) 67%);
-  box-shadow: 0px 3px 29px 1px black;
+  box-shadow: 0px 3px 29px 1px rgb(0, 0, 0);
+  color: white;
 }
 .courseContainer .courseWrapper .buttonsContainer .buttonsWrapper .button:hover {
   background-color: #a80070;
@@ -924,163 +938,273 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   background: linear-gradient(180deg, rgba(82, 37, 189, 0.9080007003) 1%, rgba(69, 69, 69, 0.9332107843) 99%);
 }
 
-.mainContainerContact {
+.main {
   padding: 1% 10% 1% 10%;
+  margin-top: 2%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  min-height: 75%;
 }
-@media screen and (max-width: 1024px) {
-  .mainContainerContact {
-    padding: 1% 2% 1% 2%;
-  }
-}
-.mainContainerContact .mainTitle {
-  padding: 2%;
-  text-transform: uppercase;
-}
-.mainContainerContact .mainWrapper {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-}
-@media screen and (max-width: 1024px) {
-  .mainContainerContact .mainWrapper {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-.mainContainerContact .mainWrapper .netWrapper {
+
+.panel {
   display: flex;
   flex-direction: column;
+  color: #f6f2f5;
+  text-align: center;
+  margin-bottom: 2%;
 }
-@media screen and (max-width: 1024px) {
-  .mainContainerContact .mainWrapper .netWrapper {
-    display: flex;
-    flex-direction: row;
-  }
+.panel h2 {
+  color: #f6f2f5;
+  margin: 3% 0%;
+  font-size: 2rem;
+  background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.1516981793) 67%);
 }
-@media screen and (max-width: 768px) {
-  .mainContainerContact .mainWrapper .netWrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
-  }
-}
-.mainContainerContact .mainWrapper .netWrapper .netLink {
-  display: flex;
-  margin-bottom: 10%;
-}
-@media screen and (max-width: 1024px) {
-  .mainContainerContact .mainWrapper .netWrapper .netLink {
-    margin-top: 10%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .mainContainerContact .mainWrapper .netWrapper .netLink {
-    margin-top: 0%;
-  }
-}
-.mainContainerContact .mainWrapper .netWrapper .netLink .netLogo {
-  width: 25%;
-}
-.mainContainerContact .mainWrapper .netWrapper .netLink .netLogo .logo {
+
+.contact__form {
   width: 100%;
-}
-.mainContainerContact .mainWrapper .netWrapper .netLink .netText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-left: 1rem;
-  color: #f0f0f0;
-  font-weight: 600;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper {
-  display: grid;
-  grid-template: 1fr 1fr 4fr 1fr/1fr;
-  gap: 1rem;
-  width: 100%;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .namesWrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
-}
-@media screen and (max-width: 1024px) {
-  .mainContainerContact .mainWrapper .formContainer .formInputsWrapper .namesWrapper {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 100%));
-  }
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .namesWrapper .inputName {
-  margin: 2%;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .namesWrapper .inputLastName {
-  margin: 2%;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .mailPhoneWrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50%, 50%));
-}
-@media screen and (max-width: 1024px) {
-  .mainContainerContact .mainWrapper .formContainer .formInputsWrapper .mailPhoneWrapper {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 100%));
-  }
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .mailPhoneWrapper .inputMail {
-  margin: 2%;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .mailPhoneWrapper .inputPhone {
-  margin: 2%;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .inputTextArea {
-  display: flex;
-  flex-direction: column;
-  margin: 2%;
-}
-@media screen and (max-width: 1024px) {
-  .mainContainerContact .mainWrapper .formContainer .formInputsWrapper .inputTextArea {
-    margin: 0;
-  }
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .inputTextArea .pIn {
-  margin-bottom: 1%;
-}
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .inputTextArea .textarea {
   display: flex;
   flex-grow: 1;
 }
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .submitWrapper {
+
+.redes {
   display: flex;
-  margin: 0% 0% 2% 2%;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%;
 }
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .submitWrapper .btnSubmit {
+.redes__link {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   color: #f6f2f5;
-  font-size: 1.2rem;
-  padding: 1% 5%;
-  border: black 1px solid;
-  background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.2301295518) 67%);
-  box-shadow: 0px 3px 29px 1px black;
-  border-radius: 10px;
+  padding: 2% 0%;
 }
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .submitWrapper .btnSubmit:hover {
-  background-color: #a80070;
-  transition: all 0.3s ease-in-out;
+.redes__logo {
+  display: flex;
+  width: 28%;
 }
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .submitWrapper .btnSubmit:active {
-  box-shadow: 0 0px 0.5rem 0.5rem #a80070;
-  transition: all 0.1s ease-in-out;
+.redes__logo img {
+  width: 100%;
 }
-@media screen and (max-width: 480px) {
-  .mainContainerContact .mainWrapper .formContainer .formInputsWrapper .submitWrapper .btnSubmit {
-    font-size: 1rem;
-    padding: 5% 2% 5% 2%;
+.redes__name {
+  color: #f6f2f5;
+  display: flex;
+  align-items: center;
+  padding: 0% 2%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+.form .inputs__Boxes {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 0%;
+}
+.form .inputs__Boxes .input__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3%;
+}
+.form .inputs__Boxes .input__wrapper .input {
+  display: inline-block;
+  width: 48%;
+  padding: 2%;
+}
+.form .inputs__Boxes .input__area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form .inputs__Boxes .input__area .area__title {
+  margin-bottom: 2%;
+}
+.form .inputs__Boxes .input__area .textarea {
+  width: 100%;
+  min-height: 25vh;
+  flex-grow: 1;
+}
+.form .buttonSub {
+  display: block;
+  padding: 2%;
+  width: 100%;
+  color: #f6f2f5;
+  font-weight: 600;
+}
+.form .buttonSub .btn {
+  margin-top: 2%;
+  background-color: #d2008d;
+  width: 28%;
+}
+.form .buttonSub .btn a {
+  color: #f6f2f5;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.form .buttonSub .btn:hover {
+  box-shadow: -1px 3px 10px 2px black;
+}
+
+@media screen and (max-width: 768px) {
+  .panel h2 {
+    font-size: 5vw;
+    margin-bottom: 10%;
+  }
+  .contact__form {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  .redes {
+    flex-direction: row;
+    width: 100%;
+  }
+  .redes__link {
+    justify-content: center;
+    align-items: center;
+  }
+  .redes__logo {
+    width: 45%;
+  }
+  .redes__name {
+    display: none;
+  }
+  .redes .form {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .redes .form .buttonSub .btn {
+    background-color: #d2008d;
+    margin: 2% 0%;
   }
 }
-.mainContainerContact .mainWrapper .formContainer .formInputsWrapper .submitWrapper .btnSubmit a {
-  color: #f0f0f0;
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 1% 2% 1% 2%;
+  }
+  .panel h2 {
+    font-size: 6vw;
+  }
+}
+.register {
+  margin: 5% 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+}
+.register .logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+.register .register__form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  min-width: 30%;
+}
+.register .register__form .input__group {
+  margin-bottom: 15px;
+}
+.register .register__form .input__group .input__label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+.register .register__form .input__group .input__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.register .register__form .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.register .register__form .buttons .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 1px;
+}
+.register .register__form .buttons .btn:hover {
+  box-shadow: -1px 3px 10px 2px black;
+}
+.register .register__form .buttons .btn--register {
+  background-color: #d2008d;
+  color: white;
+}
+.register .register__form .buttons .btn--login {
+  background-color: #5225BD;
+  color: white;
+}
+.register .register__form .buttons .btn a {
+  color: white;
+}
+
+.loginn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0%;
+  min-height: 75%;
+}
+.loginn .logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+.loginn__form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  min-width: 30%;
+}
+.loginn .input__group {
+  margin-bottom: 15px;
+}
+.loginn .input__label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+}
+.loginn .input__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.loginn .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.loginn .buttons .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 1%;
+}
+.loginn .buttons .btn:hover {
+  box-shadow: -1px 3px 10px 2px black;
+}
+.loginn .buttons .btn--register {
+  background-color: #d2008d;
+  color: white;
+}
+.loginn .buttons .btn--login {
+  background-color: #5225BD;
+  color: white;
+}
+.loginn .buttons .btn a {
+  color: white;
 }
 
 /*footer*/
@@ -1176,6 +1300,4 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 .footer .redesWrapper .linkImg .netImg {
   display: flex;
   width: 100%;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

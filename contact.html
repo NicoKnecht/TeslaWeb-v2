@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://kit.fontawesome.com/8d2a6304f1.js" crossorigin="anonymous"></script>
@@ -82,97 +82,101 @@
                     <a class="navLink" href="contact.html">CONTACTO</a>
                 </li>
                 <li class="navItem enter">
-                    <a class="navLink" href="inConstruction.html">Ingresá</a>
+                    <a class="navLink" href="login.html">Ingresá</a>
                 </li>
                 <li class="navItem login">
-                    <a class="navLink" class="lastItem" href="inConstruction.html">Registrate</a>
+                    <a class="navLink" class="lastItem" href="register.html">Registrate</a>
                 </li>
             </ul>
         </nav>
     </header>
     <!--Main-->
-    <main class="mainContainerContact">
-        <h2 class="mainTitle">consultanos</h2>
-        <div class="mainWrapper">
-            <!--networks-->
-            <div class="netWrapper">
-                <a href="" class="netLink">
-                    <div class="netLogo">
-                        <img class="logo" src="img/linkedin (2).png" alt="Logo LinkedIn">
-                    </div>
-                    <div class="netText">
-                        <p>
-                            LinkedIn
-                        </p>
-                    </div>
-                </a>
-                <a href="" class="netLink">
-                    <div class="netLogo">
-                        <img class="logo" src="img/facebook.png" alt="Logo Facebook">
-                    </div>
-                    <div class="netText">
-                        <p>
-                            Facebook
-                        </p>
-                    </div>
-                </a>
-                <a href="" class="netLink">
-                    <div class="netLogo">
-                        <img class="logo" src="img/instagram.png" alt="Logo Instagram">
-                    </div>
-                    <div class="netText">
-                        <p>
-                            Instagram
-                        </p>
-                    </div>
-                </a>
-                <a href="" class="netLink">
-                    <div class="netLogo">
-                        <img class="logo" src="img/youtube.png" alt="Logo Youtube">
-                    </div>
-                    <div class="netText">
-                        <p>
-                            YouTube
-                        </p>
-                    </div>
-                </a>
-                <a href="" class="netLink">
-                    <div class="netLogo">
-                        <img class="logo" src="img/discord.png" alt="Logo Discord">
-                    </div>
-                    <div class="netText">
-                        <p>
-                            Discord
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <!--Form-->
-            <div class="formContainer">
-                <div class="formInputsWrapper">
-                    <div class="namesWrapper">
-                        <input class="inputName" type="text" placeholder="Nombre">
-                        <input class="inputLastName" type="text" placeholder="Apellido">
-                    </div>
-                    <div class="mailPhoneWrapper">
-                        <input class="inputMail" type="text" placeholder="Mail">
-                        <input class="inputPhone" type="text" placeholder="Teléfono">
-                    </div>
-                    <div class="inputTextArea">
-                        <p class="pIn">Dejanos tu mensaje</p>
-                        <textarea class="textarea" name="" id="" cols="" rows=""></textarea>
-                    </div>
-                    <div class="submitWrapper">
-                        <button type="submit" class="btnSubmit"><a href="#">Enviar</a></button>
-                    </div>
+    <main class="main">
+        <div class="panel">
+            <h2>
+                Contactanos
+            </h2>
+            <!--Comienzo Redes + Formulario-->
+            <div class="contact__form">
+                <!--Comienzo Redes-->
+                <div class="redes">
+                    <!--Comienzo cuadricula red (1)-->
+                    <a href="https://www.linkedin.com/" class="redes__link">
+                        <div class="redes__logo">
+                            <img src="/img/linkedin (2).png" alt="Logo LinkedIn">
+                        </div>
+                        <div class="redes__name">
+                            <p>
+                                LinkedIn
+                            </p>
+                        </div>
+                    </a>
+                    <!--Final cuadricula red (1)-->
+                    <!--Comienzo cuadricula red (2)-->
+                    <a href="https://www.facebook.com/" class="redes__link">
+                        <div class="redes__logo">
+                            <img src="/img/facebook.png" alt="Logo Facebook">
+                        </div>
+                        <div class="redes__name">
+                            <p>
+                                Facebook
+                            </p>
+                        </div>
+                    </a>
+                    <!--Final cuadricula red (2)-->
+                    <!--Comienzo cuadricula red (3)-->
+                    <a href="https://www.instagram.com/" class="redes__link">
+                        <div class="redes__logo">
+                            <img src="/img/instagram.png" alt="Logo Instagram">
+                        </div>
+                        <div class="redes__name">
+                            <p>
+                                Instagram
+                            </p>
+                        </div>
+                    </a>
+                    <!--Final cuadricula red (3)-->
+                    <!--Comienzo cuadricula red (4)-->
+                    <a href="https://www.youtube.com/" class="redes__link">
+                        <div class="redes__logo">
+                            <img src="/img/youtube.png" alt="Logo Youtube">
+                        </div>
+                        <div class="redes__name">
+                            <p>
+                                YouTube
+                            </p>
+                        </div>
+                    </a>
+                    <!--Final cuadricula red (4)-->
+
                 </div>
+                <!--Final Redes-->
+                <!--Comienzo Formulario-->
+                <div class="form">
+                    <div class="inputs__Boxes">
+                        <div class="input__wrapper">
+                            <input class="input" type="text" placeholder="Nombre">
+                            <input class="input" type="text" placeholder="Apellido">
+                        </div>
+                        <div class="input__wrapper">
+                            <input class="input" type="text" placeholder="Mail">
+                            <input class="input" type="text" placeholder="Teléfono">
+                        </div>
+                        <div class="input__area">
+                            <p class="area__title">Dejanos tu mensaje</p>
+                            <textarea class="textarea" name="" id="" cols="" rows=""></textarea>
+                        </div>
+                    </div>
 
+                    <div class="buttonSub">
+                        <button type="submit" class="btn"><a href="#">Enviar</a></button>
+                    </div>
 
-
+                </div>
+                <!--Final Formulario-->
             </div>
+            <!--Final Redes + Formulario-->
         </div>
-        </section>
-
     </main>
     <!-- Footer-->
     <footer class="footer">

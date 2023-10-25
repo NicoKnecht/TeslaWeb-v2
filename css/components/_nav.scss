@@ -56,10 +56,10 @@
                 color: $gral-white;
 
                 @media all and (max-width: 768px) {
-                    font-size: 8vw;
+                    font-size: 9vw;
                 }
                 @media all and (max-width: 480px) {
-                    font-size: 9vw;
+                    font-size: 10vw;
                 }
             }
         }
@@ -95,7 +95,8 @@
                         font-size: 3vw;
                     }
                     @media all and (max-width: 480px) {
-                        font-size: 1.5vw;
+                        font-size: 3.5vw;
+                        
                     }
                     &:last-of-type {
                         @media all and (max-width: 1024px) {
@@ -166,14 +167,17 @@
                 position: fixed;
                 top: 0;
                 left: 0px;
-                height: 80vh;
+                height: 85vh;
                 padding: 10% 0% 0% 0%;
                 background: linear-gradient(
                     180deg,
                     rgba(82, 37, 189, 1) 0%,
                     rgba(141, 120, 193, 1) 64%,
-                    rgba(196, 196, 196, 0.908000700280112) 99%
+                    rgba(123, 120, 120, 0.877) 99%
                 );
+            }
+            @media all and (max-width: 480px) {
+                height: 65vh;
             }
         }
     }

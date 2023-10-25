@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
 
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/8d2a6304f1.js" crossorigin="anonymous"></script>
@@ -81,43 +80,51 @@
                     <a class="navLink" href="contact.html">CONTACTO</a>
                 </li>
                 <li class="navItem enter">
-                    <a class="navLink" href="#">Ingresá</a>
+                    <a class="navLink" href="login.html">Ingresá</a>
                 </li>
                 <li class="navItem login">
-                    <a class="navLink" class="lastItem" href="#">Registrate</a>
+                    <a class="navLink" class="lastItem" href="register.html">Registrate</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="RegContainer">
-        <h1 class="logRegTitle">
-            Crear cuenta
-        </h1>
-        <div class="RegUser">
-            <input type="email" id="mail" name="email" placeholder="Mail">
+    <main class="register">
+        <div class="logo">
+            <img src="img/tesla.png" alt="Logo de la aplicación">
         </div>
-        <div class="RegPass">
-            <input type="password" id="pass" name="sontraseña" placeholder="contraseña">
-        </div>
-        <div class="regBtnWrapper">
-            <button class="btn">Acceder</button>
-        </div>
-        <div class="legal">
-            <p class="conforme">
-                Al registrarte, aceptas nuestras <a href="#">Condiciones de uso</a> y <a href="#">Política de
-                    privacidad</a> .
-            </p>
-        </div>
-        <div class="linkRegisterWrapper">
-            <p class="Register">
-                ¿Ya tienes cuenta?
-                <a href="login.html" class="link">
-                    Acceder
-                </a>
-            </p>
-        </div>
+        <form class="register__form">
+            <div class="input__group">
+                <label for="first_name" class="input__label">Nombre</label>
+                <input type="text" id="first_name" name="first_name" placeholder="Ingrese su nombre"
+                    class="input__input">
+            </div>
+            <div class="input__group">
+                <label for="last_name" class="input__label">Apellido</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Ingrese su apellido"
+                    class="input__input">
+            </div>
+            <div class="input__group">
+                <label for="username" class="input__label">Usuario</label>
+                <input type="text" id="username" name="username" placeholder="Ingrese su usuario" class="input__input">
+            </div>
+            <div class="input__group">
+                <label for="email" class="input__label">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"
+                    class="input__input">
+            </div>
+            <div class="input__group">
+                <label for="password" class="input__label">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña"
+                    class="input__input">
+            </div>
 
+            <div class="buttons">
+                <button class="btn btn--register"><a href="register.html"></a>Registrarse</button>
+                <button class="btn btn--login"><a href="login.html">Iniciar Sesión</a></button>
+            </div>
+        </form>
     </main>
+
     <footer class="footer">
         <div class="logoLocationWrapper">
             <a href="index.html" class="logoFooterLink">
