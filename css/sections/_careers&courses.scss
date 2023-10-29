@@ -16,6 +16,7 @@
     // }
     .careersContainer {
         padding: $gral-padding;
+        margin-bottom: 10%;
         @media all and (max-width: 768px) {
             padding: $mobile-padding;
         }

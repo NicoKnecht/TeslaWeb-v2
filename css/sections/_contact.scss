@@ -3,9 +3,13 @@
 .main {
     padding: $gral-padding;
     margin-top: 2%;
+    margin-bottom: 20%;
     display: flex;
     min-height: 75%;
- 
+
+    @media screen and (min-width: 1440px) {
+      
+    }
   }
   
   .panel {
@@ -14,7 +18,7 @@
     color: #f6f2f5;
     text-align: center;
     margin-bottom: 2%;
- 
+    width: 100%;
   
     h2 {
       color: #f6f2f5;

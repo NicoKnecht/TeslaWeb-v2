@@ -4,6 +4,10 @@
 body {
     // color: #f6f2f5;
     .mainWrapper {
+        margin-bottom: 12%;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 30%;
+        }
         /*Hero*/
         .heroWrapper {
             color: $gral-white;
