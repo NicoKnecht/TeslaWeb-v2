@@ -677,6 +677,7 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 @media all and (max-width: 768px) {
   .mainContainer .careersContainer {
     padding: 1% 2% 1% 2%;
+    margin-bottom: 25%;
   }
 }
 .mainContainer .careersContainer .aboutCareersWrapper .titleWrapper {
@@ -730,10 +731,12 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 
 .careerContainer .careerWrapper {
   padding: 1% 10% 1% 10%;
+  margin-bottom: 10%;
 }
-@media all and (max-width: 780px) {
+@media all and (max-width: 768px) {
   .careerContainer .careerWrapper {
     padding: 1% 2% 1% 2%;
+    margin-bottom: 25%;
   }
 }
 .careerContainer .careerWrapper .careerDescription .descTitle {
@@ -846,12 +849,14 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 
 .courseContainer .courseWrapper {
   padding: 1% 10% 1% 10%;
+  margin-bottom: 10%;
   /*buttons*/
   /*FAQS*/
 }
-@media all and (max-width: 780px) {
+@media all and (max-width: 768px) {
   .courseContainer .courseWrapper {
     padding: 1% 2% 1% 2%;
+    margin-bottom: 25%;
   }
 }
 .courseContainer .courseWrapper .courseDescription .descTitle {

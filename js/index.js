@@ -1,8 +1,9 @@
-/*menu*/
+/*VAR*/
+//menu
 const menuToggle = document.querySelector('.navBurguerMenu');
 const menuMobile = document.querySelector('.navMenuWrapper')
 
-/*faqs*/
+//faqs
 const faqsToggle = document.querySelectorAll('.faqsSubtitle');//aray
 let faqsInfo = document.querySelectorAll('.faqsInformation');// array
 

@@ -3,8 +3,10 @@
 .careerContainer {
     .careerWrapper {
         padding: $gral-padding;
-        @media all and (max-width: 780px) {
+        margin-bottom: 10%;
+        @media all and (max-width: 768px) {
             padding: $mobile-padding;
+            margin-bottom: 25%;
         }
         .careerDescription {
             .descTitle {
