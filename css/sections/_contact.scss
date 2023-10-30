@@ -103,6 +103,7 @@
           width: 100%;
           min-height: 25vh;
           flex-grow: 1;
+          padding: 1%;
         }
       }
     }
@@ -114,11 +115,12 @@
         width: 100%;
         color: #f6f2f5;
         font-weight: 600;
-  
+        margin-bottom: 3%;
         .btn {
           margin-top: 2%;
           background-color: $gral-magenta;
-          width: 28%;
+          width: 29%;
+          padding: 1%;
           a{
             color:#f6f2f5;
             font-weight: 600;
@@ -137,6 +139,7 @@
   
   @media screen and (max-width: 768px) {
     .panel {
+      margin-bottom: 5%;
       h2 {
         font-size: 5vw;
         margin-bottom: 10%;
@@ -172,6 +175,7 @@
         flex-grow: 1;
   
         .buttonSub {
+         
             .btn {
               background-color: #d2008d;
               margin: 2% 0%;

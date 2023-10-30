@@ -7,8 +7,11 @@
     align-items: center;
     justify-content: center;
     margin: 5% 0%;
+    margin-bottom: 15%;
     min-height: 75%;
-
+    @media screen and (min-width: 300px) and (max-width: 1024px){
+        margin-bottom: 30%;
+    }
     .logo {
         img {
             max-width: 150px;

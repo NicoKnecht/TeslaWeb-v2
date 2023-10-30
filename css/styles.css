@@ -1046,6 +1046,7 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   width: 100%;
   min-height: 25vh;
   flex-grow: 1;
+  padding: 1%;
 }
 .form .buttonSub {
   display: block;
@@ -1053,11 +1054,13 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   width: 100%;
   color: #f6f2f5;
   font-weight: 600;
+  margin-bottom: 3%;
 }
 .form .buttonSub .btn {
   margin-top: 2%;
   background-color: #d2008d;
-  width: 28%;
+  width: 29%;
+  padding: 1%;
 }
 .form .buttonSub .btn a {
   color: #f6f2f5;
@@ -1069,6 +1072,9 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 }
 
 @media screen and (max-width: 768px) {
+  .panel {
+    margin-bottom: 5%;
+  }
   .panel h2 {
     font-size: 5vw;
     margin-bottom: 10%;
@@ -1182,7 +1188,13 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   align-items: center;
   justify-content: center;
   margin: 5% 0%;
+  margin-bottom: 15%;
   min-height: 75%;
+}
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+  .loginn {
+    margin-bottom: 30%;
+  }
 }
 .loginn .logo img {
   max-width: 150px;
