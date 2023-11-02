@@ -55,9 +55,13 @@
                 .faqsItem {
                     // margin: 0% 0%;
                     cursor: pointer;
+                  
                     .faqsSubtitle {
                         font-size: 1.4rem;
                         margin: 0.5rem 0rem;
+                        &:hover{
+                            color: $gral-magenta;
+                        }
                         @media screen and (max-width: 480px) {
                             font-size: 1.2rem;
                         }

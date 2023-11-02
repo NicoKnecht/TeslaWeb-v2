@@ -92,7 +92,7 @@
         <div class="logo">
             <img src="img/tesla.png" alt="Logo de la aplicación">
         </div>
-        <form class="register__form">
+        <form class="register__form" id="form">
             <div class="input__group">
                 <label for="first_name" class="input__label">Nombre</label>
                 <input type="text" id="first_name" name="first_name" placeholder="Ingrese su nombre"
@@ -112,9 +112,14 @@
                 <small></small>
             </div>
             <div class="input__group">
-                <label for="email" class="input__label">Correo Electrónico</label>
+                <label for="email" class="input__label">Teléfono</label>
                 <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"
                     class="input__input">
+                <small></small>
+            </div>
+            <div class="input__group">
+                <label for="telefono" class="input__label">Correo Electrónico</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ingrese su teléfono" class="input__input">
                 <small></small>
             </div>
             <div class="input__group">
@@ -125,7 +130,7 @@
             </div>
 
             <div class="buttons">
-                <button class="btn btn--register"><a href="register.html"></a>Registrarse</button>
+                <button class="btn btn--register" type="submit"><a href="register.html"></a>Registrarse</button>
                 <button class="btn btn--login"><a href="login.html">Iniciar Sesión</a></button>
             </div>
         </form>
@@ -162,8 +167,8 @@
 
 
     </footer>
-
     <script src="js/index.js"></script>
+    <script src="js/register.js"></script>
 </body>
 
 </html>

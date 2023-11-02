@@ -20,7 +20,7 @@ const openmenu = () => {
 
 };
 
-
+// abrir faqs en carreras
 const openFaqs = (e) => {
     console.log(e.target.id);
     let j = e.target.id; // captura el ID del elemento clickeado

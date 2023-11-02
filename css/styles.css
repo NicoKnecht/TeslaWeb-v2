@@ -933,6 +933,9 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   font-size: 1.4rem;
   margin: 0.5rem 0rem;
 }
+.courseContainer .courseWrapper .faqsWrapper .faqsList .faqsItem .faqsSubtitle:hover {
+  color: #d2008d;
+}
 @media screen and (max-width: 480px) {
   .courseContainer .courseWrapper .faqsWrapper .faqsList .faqsItem .faqsSubtitle {
     font-size: 1.2rem;
