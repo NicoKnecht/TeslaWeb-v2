@@ -125,10 +125,10 @@ a:active {
 }
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navMenuWrapper .navItem {
-    padding: 1.8% 0rem 1.8% 0rem;
-    width: 80%;
+    padding: 1.8% 0% 1.8% 0%;
+    width: 100%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     border-bottom: 1px #d1d1d1 solid;
   }
 }
@@ -152,8 +152,9 @@ a:active {
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navMenuWrapper .navItem .navLink {
     color: #f0f0f0;
+    padding: 0% 35% 0% 35%;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 3.1vw;
   }
 }
 @media all and (max-width: 480px) {
@@ -1157,6 +1158,19 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+.register .register__form .input__group .error {
+  border: 1px solid #dc3545;
+}
+.register .register__form .input__group .success {
+  border: 1px solid #28a745;
+}
+.register .register__form .input__group small {
+  color: #dc3545;
+  max-width: 350px;
+  text-align: left;
+  padding-left: 4%;
+  display: none;
 }
 .register .register__form .buttons {
   display: flex;
