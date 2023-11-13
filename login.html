@@ -96,9 +96,8 @@
             </div>
             <form class="loginn__form">
                 <div class="input__group">
-                    <label for="username" class="input__label">Usuario</label>
-                    <input type="text" id="username" name="username" placeholder="Ingrese su usuario"
-                        class="input__input">
+                    <label for="Email" class="input__label">Email</label>
+                    <input type="text" id="mail" name="Email" placeholder="Ingrese su usuario" class="input__input">
                 </div>
 
                 <div class="input__group">
@@ -106,8 +105,9 @@
                     <input type="password" id="password" name="password" placeholder="Ingrese su contraseña"
                         class="input__input">
                 </div>
+                <small id="form__error"></small>
                 <div class="buttons">
-                    <button class="btn btn--login"><a href="login.html">Acceder</a></button>
+                    <button class="btn btn--login" type="submit">Acceder</button>
                     <button class="btn btn--register"><a href="register.html">Registrarse</a></button>
 
                 </div>
@@ -146,7 +146,9 @@
 
     </footer>
 
-    <script src="js/index.js"></script>
+
+    <script src="js/login.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

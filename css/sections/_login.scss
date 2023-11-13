@@ -44,7 +44,14 @@
         border-radius: 3px;
        
     }
-
+small{
+    color: #dc3545;
+    max-width: 350px;
+    text-align:left;
+    padding-left: 4%;
+    margin-bottom: 3%;
+//    display: none;
+}
     .buttons {
         display: flex;
         justify-content: space-between;
@@ -56,6 +63,7 @@
             cursor: pointer;
             border-radius: 3px;
             margin: 1%;
+            color: white;
 
             &:hover {
                 box-shadow: -1px 3px 10px 2px black;
@@ -71,9 +79,7 @@
                 color: white;
             }
 
-            a {
-                color: white;
-            }
+          
         }
     }
 }

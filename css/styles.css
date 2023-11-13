@@ -60,6 +60,7 @@ a:active {
 }
 .headerContainer .navWrapper .navLogo {
   width: 8rem;
+  order: 1;
 }
 @media all and (max-width: 1024px) {
   .headerContainer .navWrapper .navLogo {
@@ -69,11 +70,13 @@ a:active {
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navLogo {
     width: 21vw;
+    order: 2;
   }
 }
 @media all and (max-width: 480px) {
   .headerContainer .navWrapper .navLogo {
     width: 26vw;
+    order: 2;
   }
 }
 .headerContainer .navWrapper .navLogo:hover {
@@ -85,19 +88,22 @@ a:active {
   width: 100%;
 }
 .headerContainer .navWrapper .navBurguerMenu {
+  order: 1;
+  background-color: currentcolor;
+  border: none;
   display: none;
 }
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navBurguerMenu {
-    display: block;
+    order: 1;
+    display: flex;
   }
 }
 .headerContainer .navWrapper .navBurguerMenu .btnBurguer {
-  font-size: 6vw;
-  position: absolute;
-  z-index: 1;
-  right: 2%;
-  color: #f0f0f0;
+  width: 3.2rem;
+}
+.headerContainer .navWrapper .navBurguerMenu .btnBurguer .btnBurguer :hover {
+  box-shadow: -1px 3px 10px 2px black;
 }
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navBurguerMenu .btnBurguer {
@@ -112,6 +118,7 @@ a:active {
 .headerContainer .navWrapper .navMenuWrapper {
   display: flex;
   align-items: center;
+  order: 2;
   /*drop down careers and courses*/
 }
 @media all and (max-width: 768px) {
@@ -185,6 +192,7 @@ a:active {
 }
 .headerContainer .navWrapper .navMenuWrapper .navItem.enter,
 .headerContainer .navWrapper .navMenuWrapper .navItem.login {
+  display: none;
   border: #f6f2f5 solid 2px;
   margin-left: 0.5rem;
 }
@@ -220,8 +228,191 @@ a:active {
     border: #a80070 solid 2px;
   }
 }
+.headerContainer .navWrapper .navUserAndCart {
+  display: flex;
+  order: 3;
+  gap: 0.8rem;
+  margin-right: 2%;
+}
+.headerContainer .navWrapper .navUserAndCart .navUser {
+  width: 2.4rem;
+}
+.headerContainer .navWrapper .navUserAndCart .navUser img {
+  width: 100%;
+}
+.headerContainer .navWrapper .navUserAndCart .navUser__dropDown {
+  top: 0;
+}
+.headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options {
+  margin-top: 5%;
+}
+.headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__user, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__out {
+  font-size: 2rem;
+  margin: 2%;
+}
 @media all and (max-width: 768px) {
-  .headerContainer .navWrapper .navMenuWrapper.open {
+  .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__user, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__out {
+    font-size: 1.6;
+    margin: 2%;
+  }
+}
+.headerContainer .navWrapper .navUserAndCart .navCart {
+  width: 2.5rem;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart img {
+  width: 100%;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: linear-gradient(173deg, rgb(255, 255, 255) 14%, rgba(176, 18, 235, 0.9) 100%);
+  width: 35%;
+  min-height: 98vh;
+  color: black;
+  padding: 2%;
+  border: 1px solid #5225BD;
+}
+@media all and (max-width: 768px) {
+  .headerContainer .navWrapper .navUserAndCart .navCart__dropDown, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown {
+    width: 60%;
+  }
+}
+@media all and (max-width: 480px) {
+  .headerContainer .navWrapper .navUserAndCart .navCart__dropDown, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown {
+    width: 85%;
+  }
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .dropDown__title, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .dropDown__title {
+  font-size: 1.5rem;
+}
+@media all and (max-width: 768px) {
+  .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .dropDown__title, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .dropDown__title {
+    font-size: 1.1rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .dropDown__title, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .dropDown__title {
+    font-size: 1rem;
+  }
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeUser {
+  width: 3rem;
+  margin: 2%;
+}
+@media all and (max-width: 768px) {
+  .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeUser {
+    width: 2rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeUser {
+    width: 1.6rem;
+  }
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper img:hover, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper img:hover {
+  box-shadow: -1px 3px 10px 2px black;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__item, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__item {
+  display: flex;
+  margin: 2% 3%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__item .item__img, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__item .item__img {
+  width: 50%;
+  margin: 1%;
+  border-radius: 5px;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__item .item__info, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__item .item__info {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  justify-content: center;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__item .item__info .item__title, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__item .item__info .item__title {
+  border-bottom: 1px solid #5225BD;
+  padding: 0.5px 0px;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__item .item__info .item__price, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__item .item__info .item__price {
+  display: block;
+  padding: 2% 0%;
+  border-bottom: 1px solid #5225BD;
+  font-weight: 600;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .divider, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .divider {
+  display: block;
+  min-width: 85%;
+  margin: 5% 0%;
+  border: 2px solid #5225BD;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .cart__total, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .cart__total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .cart__total .cart__total p, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .cart__total .cart__total p {
+  font-size: 1.5rem;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .cart__total .total__price, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .cart__total .total__price {
+  font-size: 1.8rem;
+}
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .cart__total .btn__add, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .cart__total .btn__add {
+  width: 60%;
+  padding: 2% 0%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.headerContainer .navWrapper .navUserAndCart .open {
+  display: block;
+  animation: slide 1s ease 0s 1 normal both;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.headerContainer .navWrapper .closeMenu {
+  display: none;
+  width: 4rem;
+  margin: 2%;
+  position: relative;
+  right: 35%;
+}
+@media all and (max-width: 768px) {
+  .headerContainer .navWrapper .closeMenu {
+    width: 3rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .headerContainer .navWrapper .closeMenu {
+    width: 2rem;
+  }
+}
+.headerContainer .navWrapper img:hover {
+  box-shadow: -1px 3px 10px 2px black;
+}
+@media all and (max-width: 768px) {
+  .headerContainer .navWrapper .openMenu {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -231,10 +422,21 @@ a:active {
     height: 85vh;
     padding: 10% 0% 0% 0%;
     background: linear-gradient(180deg, rgb(82, 37, 189) 0%, rgb(141, 120, 193) 64%, rgba(123, 120, 120, 0.877) 99%);
+    animation: slideMenu 1s ease 0s 1 normal both;
+  }
+}
+@keyframes slideMenu {
+  0% {
+    opacity: 0;
+    transform: translatey(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translatey(0);
   }
 }
 @media all and (max-width: 480px) {
-  .headerContainer .navWrapper .navMenuWrapper.open {
+  .headerContainer .navWrapper .openMenu {
     height: 65vh;
   }
 }
@@ -1238,6 +1440,13 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.loginn small {
+  color: #dc3545;
+  max-width: 350px;
+  text-align: left;
+  padding-left: 4%;
+  margin-bottom: 3%;
+}
 .loginn .buttons {
   display: flex;
   justify-content: space-between;
@@ -1249,6 +1458,7 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   cursor: pointer;
   border-radius: 3px;
   margin: 1%;
+  color: white;
 }
 .loginn .buttons .btn:hover {
   box-shadow: -1px 3px 10px 2px black;
@@ -1259,9 +1469,6 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 }
 .loginn .buttons .btn--login {
   background-color: #5225BD;
-  color: white;
-}
-.loginn .buttons .btn a {
   color: white;
 }
 

@@ -21,14 +21,17 @@
 
         .navLogo {
             width: 8rem;
+            order: 1;
             @media all and (max-width: 1024px) {
                 width: 13vw;
             }
             @media all and (max-width: 768px) {
                 width: 21vw;
+                order:2;
             }
             @media all and (max-width: 480px) {
                 width: 26vw;
+                order:2;
             }
 
             &:hover {
@@ -43,18 +46,23 @@
             }
         }
         .navBurguerMenu {
+            order: 1;
+            background-color: currentcolor;
+            border: none;
             display: none;
+          
             @media all and (max-width: 768px) {
-                display: block;
+                order: 1;
+                display: flex;
             }
 
             .btnBurguer {
-                font-size: 6vw;
-                position: absolute;
-                z-index: 1;
-                right: 2%;
-                color: $gral-white;
-
+               width: 3.2rem;
+               .btnBurguer :hover {
+                box-shadow: -1px 3px 10px 2px black;
+            }
+            
+            
                 @media all and (max-width: 768px) {
                     font-size: 9vw;
                 }
@@ -66,6 +74,7 @@
         .navMenuWrapper {
             display: flex;
             align-items: center;
+            order: 2;
             @media all and (max-width: 768px) {
                 display: none;
             }
@@ -129,6 +138,7 @@
             }
             .navItem.enter,
             .navItem.login {
+                display: none;
                 border: #f6f2f5 solid 2px;
                 margin-left: 0.5rem;
                 @media all and (max-width: 768px) {
@@ -162,9 +172,205 @@
                     }
                 }
             }
+
+        }
+        .navUserAndCart{
+        
+            display: flex;
+            order: 3;
+            gap: 0.8rem;
+            margin-right: 2%;
+            .navUser{
+                width: 2.4rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .navUser__dropDown{
+                @extend .navCart__dropDown;
+                top: 0;
+                .dropDown__wrapper{
+                    @extend .dropDown__wrapper;
+                    .dropDown__title{
+                        @extend .dropDown__title;
+                      
+                    }
+                    .closeUser{
+                        @extend .closeCart;
+                    }
+                }
+                .dropDown__options{
+                    margin-top: 5%;
+                 .options__user{
+                    font-size: 2rem;
+                    margin: 2%;
+                    @media all and (max-width: 768px) {
+                        font-size: 1.6;
+                        margin: 2%;
+                       }
+               
+                 }  
+                 .options__out{
+                    @extend .options__user;
+                 }
+                }
+            }
+            //cart
+            .navCart{
+                width: 2.5rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .navCart__dropDown{
+            display: none;
+                position: absolute;
+                right: 0;
+                background: linear-gradient(173deg, rgba(255, 255, 255, 1) 14%, rgba(176, 18, 235, 0.9) 100%);
+                width: 35%;
+                min-height: 98vh;
+                color: black;
+                padding: 2%;
+                border:1px solid $gral-violet;
+                @media all and (max-width: 768px) {
+                   width: 60%;
+                   }
+                   @media all and (max-width: 480px) {
+                    width: 85%;
+                    }
+                .dropDown__wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    border-bottom:1px solid black;
+                    .dropDown__title{
+                        font-size: 1.5rem;
+                     
+                        @media all and (max-width: 768px) {
+                         font-size: 1.1rem;
+                        }
+                        @media all and (max-width: 480px) {
+                            font-size: 1rem;
+                           }
+                        }
+                    .closeCart{
+                        width: 3rem;
+                       margin: 2%;
+                       @media all and (max-width: 768px) {
+                        width: 2rem;
+                       }
+                       @media all and (max-width: 480px) {
+                        width: 1.6rem;
+                       }
+                    }
+                    img:hover {
+                        box-shadow: -1px 3px 10px 2px black;
+                    }
+                    
+                }
+                .dropDown__item{
+                        display: flex;
+                        margin: 2% 3%;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        background-color: white;
+                         //width: 100%;
+                
+                    .item__img{
+                        width: 50%;
+                        margin: 1%;
+                        border-radius: 5px;
+                    }
+                    .item__info{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 2%;
+                       
+                        justify-content: center;
+                        .item__title {
+                            border-bottom: 1px solid $gral-violet;
+                            padding: 0.5px 0px;
+                        }
+                        .item__price {
+                            display: block;
+                            padding: 2% 0%;
+                            border-bottom: 1px solid $gral-violet;
+                            font-weight: 600;
+                        }
+                    }
+             
+             
+                }
+                .divider {
+                    display: block;
+                    min-width: 85%;
+                    margin: 5% 0%;
+                   border: 2px solid $gral-violet;
+                }
+                
+                .cart__total {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    font-weight: 600;
+                    gap: 0.5rem;
+                    .cart__total p {
+                        font-size: 1.5rem;
+                    }
+                    .total__price {
+                        font-size: 1.8rem;
+                    }
+                    .btn__add {
+                        width: 60%;
+                        padding: 2% 0%;
+                        font-weight: 800;
+                        font-size: 1.2rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                }
+    
+             
+            }
+            
+            .open{
+                display: block;
+                animation: slide 1s ease 0s 1 normal both;
+            }
+            @keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
         }
         /*menu Mobile*/
-        .navMenuWrapper.open {
+        .closeMenu{
+            display: none;
+                width: 4rem;
+               margin: 2%;
+               position: relative;
+               right: 35%;
+               @media all and (max-width: 768px) {
+                width: 3rem;
+               }
+               @media all and (max-width: 480px) {
+                width: 2rem;
+               }
+            }
+            img:hover {
+                box-shadow: -1px 3px 10px 2px black;
+            }
+        
+       .openMenu {
             @media all and (max-width: 768px) {
                 display: flex;
                 flex-direction: column;
@@ -180,6 +386,18 @@
                     rgba(141, 120, 193, 1) 64%,
                     rgba(123, 120, 120, 0.877) 99%
                 );
+                animation: slideMenu 1s ease 0s 1 normal both;
+            }
+            @keyframes slideMenu {
+                0% {
+                    opacity: 0;
+                    transform: translatey(-50px);
+                }
+            
+                100% {
+                    opacity: 1;
+                    transform: translatey(0);
+                }
             }
             @media all and (max-width: 480px) {
                 height: 65vh;

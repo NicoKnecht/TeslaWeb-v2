@@ -238,7 +238,9 @@ const validateForm = (e) => {
         saveUserList(usersList);
         alert("¡Bienvenido! Se ha registrado a Tesla Universidad en línea")
 
-        clearInputs();
+        //clearInputs();
+        registerForm.reset();// resetea form. es un método de form html
+        window.location.href = '../login.html';
     }
 }
 
