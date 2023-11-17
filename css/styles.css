@@ -192,7 +192,7 @@ a:active {
 }
 .headerContainer .navWrapper .navMenuWrapper .navItem.enter,
 .headerContainer .navWrapper .navMenuWrapper .navItem.login {
-  display: none;
+  display: flex;
   border: #f6f2f5 solid 2px;
   margin-left: 0.5rem;
 }
@@ -247,8 +247,13 @@ a:active {
   margin-top: 5%;
 }
 .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__user, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__out {
+  cursor: pointer;
   font-size: 2rem;
   margin: 2%;
+}
+.headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__user:hover, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__out:hover {
+  box-shadow: 0px 3px 14px 3px rgba(0, 0, 0, 0.75);
+  padding: 1%;
 }
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__user, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__options .options__out {
@@ -307,6 +312,9 @@ a:active {
   width: 3rem;
   margin: 2%;
 }
+.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .closeCart:hover, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeCart:hover, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeUser:hover {
+  box-shadow: -1px 3px 10px 2px black;
+}
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeUser {
     width: 2rem;
@@ -316,9 +324,6 @@ a:active {
   .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeCart, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper .closeUser {
     width: 1.6rem;
   }
-}
-.headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__wrapper img:hover, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__wrapper img:hover {
-  box-shadow: -1px 3px 10px 2px black;
 }
 .headerContainer .navWrapper .navUserAndCart .navCart__dropDown .dropDown__item, .headerContainer .navWrapper .navUserAndCart .navUser__dropDown .dropDown__item {
   display: flex;
@@ -398,6 +403,9 @@ a:active {
   position: relative;
   right: 35%;
 }
+.headerContainer .navWrapper .closeMenuhover {
+  box-shadow: -1px 3px 10px 2px black;
+}
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .closeMenu {
     width: 3rem;
@@ -407,9 +415,6 @@ a:active {
   .headerContainer .navWrapper .closeMenu {
     width: 2rem;
   }
-}
-.headerContainer .navWrapper img:hover {
-  box-shadow: -1px 3px 10px 2px black;
 }
 @media all and (max-width: 768px) {
   .headerContainer .navWrapper .openMenu {

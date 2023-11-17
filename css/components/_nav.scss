@@ -138,7 +138,7 @@
             }
             .navItem.enter,
             .navItem.login {
-                display: none;
+                display: flex;
                 border: #f6f2f5 solid 2px;
                 margin-left: 0.5rem;
                 @media all and (max-width: 768px) {
@@ -202,8 +202,13 @@
                 .dropDown__options{
                     margin-top: 5%;
                  .options__user{
+                    cursor: pointer;
                     font-size: 2rem;
                     margin: 2%;
+                    &:hover{
+                        box-shadow: 0px 3px 14px 3px rgba(0,0,0,0.75);
+                        padding: 1%;
+                    }
                     @media all and (max-width: 768px) {
                         font-size: 1.6;
                         margin: 2%;
@@ -257,6 +262,9 @@
                     .closeCart{
                         width: 3rem;
                        margin: 2%;
+                       &:hover {
+                        box-shadow: -1px 3px 10px 2px black;
+                    }
                        @media all and (max-width: 768px) {
                         width: 2rem;
                        }
@@ -264,9 +272,7 @@
                         width: 1.6rem;
                        }
                     }
-                    img:hover {
-                        box-shadow: -1px 3px 10px 2px black;
-                    }
+                 
                     
                 }
                 .dropDown__item{
@@ -359,6 +365,9 @@
                margin: 2%;
                position: relative;
                right: 35%;
+               &hover {
+                box-shadow: -1px 3px 10px 2px black;
+            }
                @media all and (max-width: 768px) {
                 width: 3rem;
                }
@@ -366,9 +375,7 @@
                 width: 2rem;
                }
             }
-            img:hover {
-                box-shadow: -1px 3px 10px 2px black;
-            }
+       
         
        .openMenu {
             @media all and (max-width: 768px) {
