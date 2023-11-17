@@ -193,6 +193,7 @@ a:active {
 .headerContainer .navWrapper .navMenuWrapper .navItem.enter,
 .headerContainer .navWrapper .navMenuWrapper .navItem.login {
   display: flex;
+  justify-content: center;
   border: #f6f2f5 solid 2px;
   margin-left: 0.5rem;
 }
@@ -424,7 +425,7 @@ a:active {
     position: fixed;
     top: 0;
     left: 0px;
-    height: 85vh;
+    height: 100vh;
     padding: 10% 0% 0% 0%;
     background: linear-gradient(180deg, rgb(82, 37, 189) 0%, rgb(141, 120, 193) 64%, rgba(123, 120, 120, 0.877) 99%);
     animation: slideMenu 1s ease 0s 1 normal both;
@@ -442,7 +443,7 @@ a:active {
 }
 @media all and (max-width: 480px) {
   .headerContainer .navWrapper .openMenu {
-    height: 65vh;
+    height: 85vh;
   }
 }
 

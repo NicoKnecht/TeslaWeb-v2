@@ -75,8 +75,8 @@ const login = (e) => {
             console.log("AUTENTICOOO y guardooooo");
 
             console.log(activeUser);
-            loginForm.reset();
-            window.location.href = '../index.html';
+            // loginForm.reset();
+            //   window.location.href = '../index.html';
         }
     }
 }
@@ -87,7 +87,8 @@ const login = (e) => {
 const initLogin = () => {
     loginForm.addEventListener('submit', login);
     if (activeUser) {//quiro loguearme, va al home si estoy ya logueado
-        window.location.href = '../index.html';
+        console.log(activeUser);
+        // window.location.href = '../index.html';
     }
 }
 // cambio css pendiente para que  aparesca opcioned e usuario y log out

@@ -14,8 +14,11 @@ const userContainer = document.querySelector('.navUser__dropDown');
 const userClose = document.querySelector('#closeUser');
 
 
+const logOutBtn = document.querySelector('#logout');
+const userName = document.querySelector('#userName');
 
 
+//const activeUser = JSON.parse(sessionStorage.getItem('activeuser'));
 
 /*FUNCIONES */
 
@@ -42,6 +45,10 @@ const openUser = () => {
 
 };
 
+//------------
+// const showUsername = () => {
+//     userName.textContent = `${activeUser.user}`;
+// }
 
 const initNav = () => {
 
@@ -51,6 +58,10 @@ const initNav = () => {
     cartClose.addEventListener('click', openCart);
     userButton.addEventListener('click', openUser);
     userClose.addEventListener('click', openUser);
+
+    // console.log(activeUser);
+
+    // showUsername();
 
 }
 

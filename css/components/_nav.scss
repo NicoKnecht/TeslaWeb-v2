@@ -139,6 +139,7 @@
             .navItem.enter,
             .navItem.login {
                 display: flex;
+                justify-content: center;
                 border: #f6f2f5 solid 2px;
                 margin-left: 0.5rem;
                 @media all and (max-width: 768px) {
@@ -385,7 +386,7 @@
                 position: fixed;
                 top: 0;
                 left: 0px;
-                height: 85vh;
+                height: 100vh;
                 padding: 10% 0% 0% 0%;
                 background: linear-gradient(
                     180deg,
@@ -407,7 +408,7 @@
                 }
             }
             @media all and (max-width: 480px) {
-                height: 65vh;
+                height: 85vh;
             }
         }
     }
