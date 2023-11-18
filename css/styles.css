@@ -1230,6 +1230,11 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   flex-direction: column;
   width: 65%;
 }
+@media screen and (max-width: 768px) {
+  .form {
+    margin-top: 18%;
+  }
+}
 .form .inputs__Boxes {
   flex-grow: 1;
   display: flex;
@@ -1238,13 +1243,18 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 }
 .form .inputs__Boxes .input__wrapper {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 3%;
+}
+@media screen and (max-width: 1024px) {
+  .form .inputs__Boxes .input__wrapper {
+    flex-direction: column;
+  }
 }
 .form .inputs__Boxes .input__wrapper .input {
   display: inline-block;
-  width: 48%;
+  width: 100%;
   padding: 2%;
+  margin: 1%;
 }
 .form .inputs__Boxes .input__area {
   flex-grow: 1;
@@ -1281,6 +1291,21 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 }
 .form .buttonSub .btn:hover {
   box-shadow: -1px 3px 10px 2px black;
+}
+
+.error {
+  border: 1px solid #dc3545;
+}
+
+.success {
+  border: 1px solid #28a745;
+}
+
+.small {
+  color: #dc3545;
+  max-width: 350px;
+  text-align: left;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

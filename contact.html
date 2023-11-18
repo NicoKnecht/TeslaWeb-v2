@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://kit.fontawesome.com/8d2a6304f1.js" crossorigin="anonymous"></script>
+
     <title>Careers</title>
 </head>
 
@@ -21,8 +21,11 @@
             <div class="navLogo">
                 <a href="index.html"><img src="img/tesla.png" alt="logo tesla"></a>
             </div>
-            <a class="navBurguerMenu" href="#"><i class="fas fa-bars btnBurguer"></i></a>
+            <button class="navBurguerMenu" href="#"><img class="btnBurguer" src="img/menu.png" alt="menu burguer">
+            </button>
+
             <ul class="navMenuWrapper ">
+                <img id="closeMenu" class="closeMenu" src="img/cerrar.png" alt="icono cruz">
                 <li class="navItem navItemCareers">
                     <a class="navLink" class="" href="careers.html">CARRERAS</a>
                     <ul class="careersList">
@@ -88,8 +91,66 @@
                     <a class="navLink" class="lastItem" href="register.html">Registrate</a>
                 </li>
             </ul>
+            <div class="navUserAndCart">
+                <!--CART-->
+                <div class="navCart">
+                    <img id="cart" src="img/carrito-de-compras.png" alt="icono de usuario">
+                </div>
+                <div class="cart__dropDown">
+                    <div class="navCart__dropDown">
+                        <div class="dropDown__wrapper">
+                            <h2 class="dropDown__title">CARRITO</h2>
+                            <img id="closeCart" class="closeCart" src="img/cerrar.png" alt="icono cruz">
+                        </div>
+                        <!--COMIENZO ITEM-->
+                        <div class="dropDown__item item">
+                            <img src="img/robotica.jpg" class="item__img" alt="robotica">
+                            <div class="item__info">
+                                <h3 class="item__title">Roboticar</h3>
+
+                                <span class="item__price">$10000</span>
+                            </div>
+
+                        </div>
+                        <!--FINAL ITEM-->
+                        <!--COMIENZO TOTAL-->
+                        <span class="divider"></span>
+
+                        <div class="cart__total">
+                            <p>Total:</p>
+                            <span class="total__price">$29000</span>
+                            <button class="btn__add">COMPRAR</button>
+                        </div>
+                        <!--FINAL TOTAL-->
+                    </div>
+                    <!--USER-->
+                    <div class="navUser">
+                        <img id="user" src="img/user.png" alt="icono de usuario">
+                    </div>
+                    <div class="user__dropDown">
+                        <div class="navUser__dropDown">
+                            <div class="dropDown__wrapper">
+                                <h2 class="dropDown__title" id="userName">USER</h2>
+                                <img id="closeUser" class="closeUser" src="img/cerrar.png" alt="icono cruz">
+                            </div>
+                            <!--COMIENZO OPTIONS-->
+                            <div class="dropDown__options">
+                                <div class="options__user">
+                                    <h5>&#128100;MI CUENTA</h5>
+                                </div>
+                                <div class="options__out" id="logout">
+                                    <h5>&#x1F6AA;SALIR</h5>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
         </nav>
     </header>
+
     <!--Main-->
     <main class="main">
         <div class="panel">
@@ -152,27 +213,35 @@
                 </div>
                 <!--Final Redes-->
                 <!--Comienzo Formulario-->
-                <div class="form">
+                <form class="form" id="contactForm">
                     <div class="inputs__Boxes">
                         <div class="input__wrapper">
-                            <input class="input" type="text" placeholder="Nombre">
-                            <input class="input" type="text" placeholder="Apellido">
+                            <input class="input" id="contactName" type="text" placeholder="Nombre">
+                            <small class="small" id="nameError"></small>
+                            <input class="input" id="contactLastname" type="text" placeholder="Apellido">
+                            <small class="small" id="lastnameError"></small>
                         </div>
+
                         <div class="input__wrapper">
-                            <input class="input" type="text" placeholder="Mail">
-                            <input class="input" type="text" placeholder="Teléfono">
+                            <input class="input" id="contactMail" type="text" placeholder="Mail">
+                            <small class="small" id="emailError"></small>
+                            <input class="input" id="contactPhone" type="text" placeholder="Teléfono">
+                            <small class="small" id="phoneError"></small>
                         </div>
+
                         <div class="input__area">
                             <p class="area__title">Dejanos tu mensaje</p>
-                            <textarea class="textarea" name="" id="" cols="" rows=""></textarea>
+                            <textarea class="textarea" name="" id="contactMsj" cols="" rows=""></textarea>
+                            <small class="small" id="messageError"></small>
                         </div>
+
                     </div>
 
                     <div class="buttonSub">
-                        <button type="submit" class="btn"><a href="#">Enviar</a></button>
+                        <button type="submit" class="btn" id="contactBtn"><a href="#">Enviar</a></button>
                     </div>
 
-                </div>
+                </form>
                 <!--Final Formulario-->
             </div>
             <!--Final Redes + Formulario-->
@@ -211,8 +280,9 @@
 
     </footer>
     <!--Final Footer-->
-
+    <script src="js/contact.js"></script>
     <script src="js/nav.js"></script>
+
 </body>
 
 </html>
