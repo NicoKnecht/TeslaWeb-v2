@@ -1,13 +1,14 @@
-const contactForm = document.getElementById('contactForm');
+
 const contactNameInput = document.getElementById('contactName');
 const contactLastnameInput = document.getElementById('contactLastname');
 const contactEmailInput = document.getElementById('contactMail');
 const contactPhoneInput = document.getElementById('contactPhone');
 const contactMessageInput = document.getElementById('contactMsj');
+const submitButton = document.getElementById('contactBtn');
 
 // FUNCIONES DE VALIDACIÓN
 
-const showError = (input, msg) => {
+const showErrorForm = (input, msg) => {
     const inputElement = input;
     inputElement.classList.remove("success");
     inputElement.classList.add("error");
@@ -67,12 +68,12 @@ const checkInputText = (input) => {
     const maxChar = 28;
 
     if (isEmpty(input)) {
-        showError(input, "Campo obligatorio");
+        showErrorForm(input, "Campo obligatorio");
         return false;
     }
 
     if (isBetweenValues(input, minChar, maxChar)) {
-        showError(input, `El valor ingresado debe tener entre ${minChar} y ${maxChar} caracteres`);
+        showErrorForm(input, `El valor ingresado debe tener entre ${minChar} y ${maxChar} caracteres`);
         return false;
     }
 
@@ -82,12 +83,12 @@ const checkInputText = (input) => {
 
 const checkEmail = (input) => {
     if (isEmpty(input)) {
-        showError(input, "Campo obligatorio");
+        showErrorForm(input, "Campo obligatorio");
         return false;
     }
 
     if (!isEmailOk(input)) {
-        showError(input, "El E-mail ingresado no es válido");
+        showErrorForm(input, "El E-mail ingresado no es válido");
         return false;
     }
 
@@ -97,12 +98,12 @@ const checkEmail = (input) => {
 
 const checkPhone = (input) => {
     if (isEmpty(input)) {
-        showError(input, "Campo obligatorio");
+        showErrorForm(input, "Campo obligatorio");
         return false;
     }
 
     if (!isPhoneOk(input)) {
-        showError(input, "El número de teléfono ingresado no es válido");
+        showErrorForm(input, "El número de teléfono ingresado no es válido");
         return false;
     }
 
@@ -115,12 +116,12 @@ const checkMessage = (input) => {
     const minChar = 10;
 
     if (isEmpty(input)) {
-        showError(input, "Campo obligatorio");
+        showErrorForm(input, "Campo obligatorio");
         return false;
     }
 
     if (input.value.length < minChar) {
-        showError(input, `El mensaje debe tener al menos ${minChar} caracteres`);
+        showErrorForm(input, `El mensaje debe tener al menos ${minChar} caracteres`);
         return false;
     }
 
@@ -153,7 +154,7 @@ const validateForm = (e) => {
 
 // EVENT
 const initContact = () => {
-    contactForm.addEventListener('submit', validateForm);
+    submitButton.addEventListener('click', validateForm);
     contactNameInput.addEventListener('input', () => checkInputText(contactNameInput));
     contactLastnameInput.addEventListener('input', () => checkInputText(contactLastnameInput));
     contactEmailInput.addEventListener('input', () => checkEmail(contactEmailInput));
