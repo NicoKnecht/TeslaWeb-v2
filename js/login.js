@@ -4,25 +4,40 @@ const passLogin = document.getElementById("password");
 const errorMessage = document.getElementById("form__error");
 const userNameElement = document.getElementById("userName");
 
-// Me trae los usuarios del objeto users en el localStorage y los convierte de JSON a objeto
 const usersList = JSON.parse(localStorage.getItem('users')) || [];
 
-// sessionStorage
-// solo funciona al estar abierta la pestaña
 const saveToSessionStorage = (user) => {
     sessionStorage.setItem('activeUser', JSON.stringify(user));
 }
 
-const activeUser = JSON.parse(sessionStorage.getItem('activeUser')) || {};
+const getActiveUser = () => {
+    return JSON.parse(sessionStorage.getItem('activeUser')) || {};
+}
 
-// FUNCIONES AUXILIARES
+const updateNavigationVisibility = (isLoggedIn) => {
+    const loginItems = document.querySelectorAll('.navItem.enter, .navItem.login');
+    const userAndCart = document.querySelector('.navUserAndCart');
+
+    if (isLoggedIn) {
+        loginItems.forEach(item => {
+            item.style.display = 'none';
+        });
+        userAndCart.style.display = 'flex';
+    } else {
+        loginItems.forEach(item => {
+            item.style.display = 'flex';
+        });
+        userAndCart.style.display = 'none';
+    }
+}
+
 const validateEmail = (input) => {
     return usersList.some(user => user.email === input.value.trim());
 }
 
 const validatePassword = (input) => {
     const user = usersList.find(user => user.email === mailLogin.value.trim());
-    return user.password === input.value.trim();
+    return user && user.password === input.value.trim();
 }
 
 const showError = (msg) => {
@@ -30,7 +45,7 @@ const showError = (msg) => {
     errorMessage.textContent = msg;
 }
 
-const authenticateAcount = () => {
+const authenticateAccount = () => {
     if (!validateEmail(mailLogin)) {
         showError('Los datos ingresados son incorrectos');
         return false;
@@ -42,7 +57,6 @@ const authenticateAcount = () => {
         return false;
     }
 
-    alert("Login exitoso");
     errorMessage.textContent = '';
     return true;
 }
@@ -51,68 +65,59 @@ const showUserName = (name) => {
     userNameElement.textContent = name;
 }
 
-// HACER QUE CAMBIE EL SCSS COMPLETO! QUIZAS CON UN TOGGLE DE OTRA CLASE, ASI SOLO CAMBIA LA LINEA DELÑ MENU DE LOGIN
-const hideLoginOptions = () => {
-    const loginItems = document.querySelectorAll('.navItem.enter, .navItem.login');
-    loginItems.forEach(item => {
-        item.style.display = 'none';
-    });
-}
-
-const showLoginOptions = () => {
-    const loginItems = document.querySelectorAll('.navItem.enter, .navItem.login');
-    loginItems.forEach(item => {
-        item.style.display = 'flex';
-    });
-}
-
-const showUserAndCart = () => {
-    const userAndCart = document.querySelector('.navUserAndCart');
-    userAndCart.style.display = 'flex';
-}
-
-const hideUserAndCart = () => {
-    const userAndCart = document.querySelector('.navUserAndCart');
-    userAndCart.style.display = 'none';
-}
-
 const login = (e) => {
     e.preventDefault();
-    console.log("entre a la funcion login");
-    if (authenticateAcount()) {
-        console.log("AUTENTICOOO");
+
+    if (authenticateAccount()) {
         const user = usersList.find(user => user.email === mailLogin.value.trim());
         if (user) {
-            console.log('usuario que va al sessionStorage', user);
             saveToSessionStorage(user);
             showUserName(user.name);
-            hideLoginOptions();
-            showUserAndCart();
-            console.log("AUTENTICOOO y guardooooo");
-            // loginForm.reset();
-            // window.location.href = '../index.html';
+            updateNavigationVisibility(true);
+            window.location.href = 'index.html';
         }
     }
 }
 
 const logout = () => {
+    console.log("logout 1");
     sessionStorage.removeItem('activeUser');
-    userNameElement.textContent = "USER";
-    showLoginOptions();
-    hideUserAndCart();
-    window.location.href = '../login.html';
+    const activeUser = getActiveUser();
+    if (!activeUser.name) {
+        console.log("logout 2");
+        showUserName("USER");
+        updateNavigationVisibility(false);
+        window.location.href = 'login.html';
+    }
 }
 
+// login.js
+
 const initLogin = () => {
-    loginForm.addEventListener('submit', login);
-    document.getElementById("logout").addEventListener('click', logout);
+    const activeUser = getActiveUser();
 
     if (activeUser.name) {
-        console.log(activeUser);
         showUserName(activeUser.name);
-        hideLoginOptions();
-        showUserAndCart();
+        updateNavigationVisibility(true);
+    } else {
+        updateNavigationVisibility(false);
+    }
+
+
+    /*sin el IF daba el sig error: login.js:107 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+at HTMLDocument.initLogin (login.js:107:15)*/
+    if (loginForm) {
+        loginForm.addEventListener('submit', login);
+    }
+
+    // Asegúrate de que el botón de salir esté presente antes de intentar agregar el evento
+    const logoutButton = document.getElementById("logout");
+    if (logoutButton) {
+        console.log("logout 0");
+        logoutButton.addEventListener('click', logout);
     }
 }
 
 initLogin();
+
+
