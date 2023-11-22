@@ -221,7 +221,7 @@
                     </div>
                     <div class="cardTitle">
                         <h3 class="title">
-                            Tendencias diseño web 2022
+                            Tendencias diseño web 2023
                         </h3>
                     </div>
                 </a>
@@ -268,7 +268,7 @@
             <a href="index.html" class="logoFooterLink">
                 <img src="img/tesla2.png" alt="logo tesla footer" class="logoFooter">
             </a>
-            <p class="legal">©2021 TESLA</p>
+            <p class="legal" id="legal">d</p>
             <a class="locationWrapper" href="https://goo.gl/maps/kPQ1UhNFViuuuidS8" target="_blank">
                 <img class="mapIcon" src="img/mapa.png" alt="icono de mapa">
                 <p class="location">Calle falsa 123/9 - CABA</p>
@@ -295,11 +295,22 @@
 
     </footer>
 
+    <script>
 
+        const showYear = () => {
+            year = new Date();
+            document.getElementById('legal').textContent = ` ©${year.getFullYear()} TESLA`
+        }
+        showYear();
+    </script>
     <script src="js/nav.js"></script>
     <script src="js/login.js"></script>
 
-    <script src="js/index.js"></script>
+
+
+
+    <!-- 
+    (`©${Date.prototype.getFullYear()} TESLA`); -->
 
 </body>
 
