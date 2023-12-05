@@ -1,6 +1,7 @@
 @use '../base/gral-styles' as *;
 
 .mainContainer {
+   
     // .heroWrapper {
     //     background-image: url(../../img/universoRosa.jpg);
     //     background-position: top;
@@ -16,10 +17,11 @@
     // }
     .careersContainer {
         padding: $gral-padding;
-        margin-bottom: 10%;
+        margin-bottom: 14%;
+        
         @media all and (max-width: 768px) {
             padding: $mobile-padding;
-            margin-bottom: 25%;
+            
         }
         .aboutCareersWrapper {
             .titleWrapper {

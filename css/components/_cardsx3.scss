@@ -1,10 +1,11 @@
 @use '../base/gral-styles' as *;
 
 .cardsWrapper {
-    margin: 2% 0%;
+    margin: 5% 0%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3%;
+   
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -24,6 +25,7 @@
 
         @media screen and (max-width: 768px) {
             height: 50vw;
+            margin-bottom: 20%;
         }
         &:hover {
             box-shadow: -1px 3px 24px 4px black;
@@ -44,10 +46,17 @@
         }
         .cardTitle {
             @include center(row);
+            cursor: pointer;
             .title {
                 color: #080808;
                 text-align: center;
                 padding: 3%;
+                &:hover {
+                   color: $gral-violet;
+                }
+                &:active {
+                    color: $gral-violet;
+                }
                 @media screen and (max-width: 1024px) {
                     font-size: 1.8vw;
                 }
@@ -57,6 +66,21 @@
                 @media screen and (max-width: 480px) {
                     font-size: 3.5vw;
                 }
+            }
+        }
+        .cardBtn{
+            @include btn(1%, 1rem);
+            border: 1px black solid;
+            box-shadow: none;
+            cursor: pointer;
+            @media screen and (max-width: 768px) {
+                font-size: 2.4vw;
+                padding: 1%;
+                
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 3.2vw;
+                padding: 1%;
             }
         }
     }

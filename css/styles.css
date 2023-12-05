@@ -448,7 +448,7 @@ a:active {
 }
 
 .cardsWrapper {
-  margin: 2% 0%;
+  margin: 5% 0%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3%;
@@ -473,6 +473,7 @@ a:active {
 @media screen and (max-width: 768px) {
   .cardsWrapper .card {
     height: 50vw;
+    margin-bottom: 20%;
   }
 }
 .cardsWrapper .card:hover {
@@ -497,11 +498,18 @@ a:active {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  cursor: pointer;
 }
 .cardsWrapper .card .cardTitle .title {
   color: #080808;
   text-align: center;
   padding: 3%;
+}
+.cardsWrapper .card .cardTitle .title:hover {
+  color: #5225BD;
+}
+.cardsWrapper .card .cardTitle .title:active {
+  color: #5225BD;
 }
 @media screen and (max-width: 1024px) {
   .cardsWrapper .card .cardTitle .title {
@@ -516,6 +524,48 @@ a:active {
 @media screen and (max-width: 480px) {
   .cardsWrapper .card .cardTitle .title {
     font-size: 3.5vw;
+  }
+}
+.cardsWrapper .card .cardBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #f6f2f5;
+  font-size: 1rem;
+  padding: 1%;
+  border: black 1px solid;
+  background: linear-gradient(180deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.2301295518) 67%);
+  box-shadow: 0px 3px 29px 1px rgb(0, 0, 0);
+  color: white;
+  border: 1px black solid;
+  box-shadow: none;
+  cursor: pointer;
+}
+.cardsWrapper .card .cardBtn:hover {
+  background-color: #a80070;
+  transition: all 0.3s ease-in-out;
+}
+.cardsWrapper .card .cardBtn:active {
+  box-shadow: 0 0px 0.5rem 0.5rem #a80070;
+  transition: all 0.1s ease-in-out;
+}
+@media screen and (max-width: 480px) {
+  .cardsWrapper .card .cardBtn {
+    font-size: 1rem;
+    padding: 5% 2% 5% 2%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardsWrapper .card .cardBtn {
+    font-size: 2.4vw;
+    padding: 1%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cardsWrapper .card .cardBtn {
+    font-size: 3.2vw;
+    padding: 1%;
   }
 }
 
@@ -579,6 +629,7 @@ body .mainWrapper .heroWrapper {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  min-height: 60vh;
 }
 body .mainWrapper .heroWrapper .heroTitle {
   padding: 1% 10% 1% 10%;
@@ -592,11 +643,17 @@ body .mainWrapper .heroWrapper .heroTitle {
 body .mainWrapper .heroWrapper .heroTitle .title {
   font-size: 2.6rem;
   padding-left: 1rem;
+  margin-top: 5%;
   background: linear-gradient(79deg, rgba(168, 0, 112, 0.5662640056) 20%, rgba(242, 34, 173, 0.4682247899) 40%, rgba(255, 255, 255, 0.0396533613) 85%);
+}
+@media screen and (max-width: 768px) {
+  body .mainWrapper .heroWrapper .heroTitle .title {
+    margin-top: 8%;
+  }
 }
 @media screen and (max-width: 480px) {
   body .mainWrapper .heroWrapper .heroTitle .title {
-    font-size: 8vw;
+    font-size: 7.5vw;
   }
 }
 body .mainWrapper .heroDescription {
@@ -881,12 +938,11 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 
 .mainContainer .careersContainer {
   padding: 1% 10% 1% 10%;
-  margin-bottom: 10%;
+  margin-bottom: 14%;
 }
 @media all and (max-width: 768px) {
   .mainContainer .careersContainer {
     padding: 1% 2% 1% 2%;
-    margin-bottom: 25%;
   }
 }
 .mainContainer .careersContainer .aboutCareersWrapper .titleWrapper {
@@ -1510,7 +1566,6 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
   padding: 0% 10% 0% 10%;
   color: #080808;
   position: absolute;
-  bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .footer {
