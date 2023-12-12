@@ -1,7 +1,7 @@
 const coursesData = [
     {
         id: 1,
-        link: "../frontEnd.html",
+        link: "frontEnd.html",
         img: "../img/front.png",
         alt: "curso frontend",
         title: "DESARROLLO FRONT END",

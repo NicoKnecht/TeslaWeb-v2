@@ -68,6 +68,23 @@
         }
      
     }
+    .filterButtons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 2%;
+
+        button.filterBtn {
+            @include btn(0.5rem, 1rem);
+            width: 30%;
+            margin-top: 1%;
+            @media all and (max-width: 768px) {
+                padding: 0.2rem;
+                width: 48%;
+                margin: 1% 0;
+            }
+        }
+    }
     .vermas{
         @include btn(1%, 1rem);
         width: 45%;

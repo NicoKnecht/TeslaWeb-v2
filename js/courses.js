@@ -17,8 +17,8 @@ const createCourseTemplate = (course) => {
     <div class="cardImg">
         <img class="img" src= ${img} alt=${alt}>
     </div>
-    <a class="cardTitle">
-        <h3 class="title" href=${link}>
+    <a class="cardTitle" href=${link}>
+        <h3 class="title">
         ${title}
         </h3>
     </a>
@@ -47,6 +47,13 @@ const showMoreCourses = () => {
 }
 
 // logica de filtros
+
+
+
+
+
+
+
 const initCourses = () => {
     renderCourses(appState.courses[appState.currentCourseIndex]);
     showMoreBtn.addEventListener('click', showMoreCourses);
