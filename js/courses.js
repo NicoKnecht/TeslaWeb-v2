@@ -1,12 +1,17 @@
 const coursesContainer = document.querySelector(".cardsWrapper");
+const showMoreBtn = document.querySelector(".vermas");
+
 
 //FUCNIONES
+
+//logica render
 const renderCourses = (coursesList) => {
-    coursesContainer.innerHTML = coursesList.map(course => createCourseTemplate(course)).join("");
+    coursesContainer.innerHTML += coursesList.map(course => createCourseTemplate(course)).join("");// con += me va agregando para el boton ver mas
 }
 
 const createCourseTemplate = (course) => {
     const { id, link, img, alt, title } = course;
+    console.log(id);
     return `
     <div class="card" id=${id} href=${link}>
     <div class="cardImg">
@@ -30,9 +35,21 @@ const createCourseTemplate = (course) => {
     `;
 }
 
+const showMoreCourses = () => {
+    appState.currentCourseIndex += 1;
+    const { courses, currentCourseIndex, courseLimit } = appState;
+    renderCourses(courses[currentCourseIndex]);// ver en data.js
+    if (currentCourseIndex === courseLimit - 1) {
+        showMoreBtn.classList.add('hidden');
 
+    }
+
+}
+
+// logica de filtros
 const initCourses = () => {
-    renderCourses(coursesData);
+    renderCourses(appState.courses[appState.currentCourseIndex]);
+    showMoreBtn.addEventListener('click', showMoreCourses);
 
 }
 

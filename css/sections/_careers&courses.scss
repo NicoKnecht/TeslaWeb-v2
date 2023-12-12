@@ -18,7 +18,7 @@
     .careersContainer {
         padding: $gral-padding;
         margin-bottom: 14%;
-        
+        @include center(column);
         @media all and (max-width: 768px) {
             padding: $mobile-padding;
             
@@ -66,5 +66,19 @@
                 font-size: 1.2rem;
             }
         }
+     
+    }
+    .vermas{
+        @include btn(1%, 1rem);
+        width: 45%;
+        margin-top: 5%;
+        @media all and (max-width: 480px) {
+            font-size: 0.8rem;
+            padding: 1px;
+        }
+      
+    }
+    .hidden{
+        display: none;
     }
 }

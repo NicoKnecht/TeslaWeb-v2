@@ -122,3 +122,21 @@ const coursesData = [
     },
 
 ];
+
+
+const divideCourses = (coursesToShow) => {
+    const coursesList = [];
+    for (let i = 0; i < coursesData.length; i += coursesToShow) {
+        coursesList.push(coursesData.slice(i, i + coursesToShow));
+        //partira la cantidad total en arrays mas pequeños( en este caso de a 6)
+    }
+    console.log(coursesList)
+    return coursesList;
+}
+// podrian ser 4 variables distintas tambien pero es mejor hacerlo asi
+const appState = {
+    courses: divideCourses(6),//FUNCION
+    currentCourseIndex: 0,
+    courseLimit: divideCourses(6).length,//mostrará cantidad de elementos del array de arrays
+    activeFilter: null,
+}
