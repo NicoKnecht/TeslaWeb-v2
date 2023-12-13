@@ -947,6 +947,7 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 @media all and (max-width: 768px) {
   .mainContainer .careersContainer {
     padding: 1% 2% 1% 2%;
+    align-items: normal;
   }
 }
 .mainContainer .careersContainer .aboutCareersWrapper .titleWrapper {

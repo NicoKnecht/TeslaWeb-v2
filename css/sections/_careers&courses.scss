@@ -21,6 +21,7 @@
         @include center(column);
         @media all and (max-width: 768px) {
             padding: $mobile-padding;
+            align-items: normal;
             
         }
         .aboutCareersWrapper {
