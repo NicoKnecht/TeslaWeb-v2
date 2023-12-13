@@ -982,6 +982,22 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
     font-size: 1.1rem;
   }
 }
+.mainContainer .licCardsWrapper {
+  text-align: center;
+}
+@media all and (max-width: 480px) {
+  .mainContainer .licCardsWrapper .licCardsTitle {
+    font-size: 1.2rem;
+  }
+}
+.mainContainer .techCardsWrapper {
+  text-align: center;
+}
+@media all and (max-width: 480px) {
+  .mainContainer .techCardsWrapper .techCardsTitle {
+    font-size: 1.2rem;
+  }
+}
 .mainContainer .filterButtons {
   display: flex;
   flex-wrap: wrap;
