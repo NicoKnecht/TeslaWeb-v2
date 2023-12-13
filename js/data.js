@@ -5,7 +5,8 @@ const coursesData = [
         img: "../img/front.png",
         alt: "curso frontend",
         title: "DESARROLLO FRONT END",
-        price: "$50000"
+        price: "$50000",
+        category: "programacion"
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ const coursesData = [
         img: "../img/back.jpg",
         alt: "curso backend",
         title: "DESARROLLO BACK END CON NODE",
-        price: "$50000"
+        price: "$50000",
+        category: "programacion"
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ const coursesData = [
         img: "../img/iot.png",
         alt: "curso iot",
         title: "DESARROLLO IOT",
-        price: "$30000"
+        price: "$30000",
+        category: "redes"
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ const coursesData = [
         img: "../img/uxui.jpg",
         alt: "curso  diseño ux/ui",
         title: "DISEÑO UX/UI",
-        price: "$50000"
+        price: "$50000",
+        category: "diseno"
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ const coursesData = [
         img: "../img/mkt.jpg",
         alt: "curso Marketing",
         title: " MARKETING DIGITAL",
-        price: "$30000"
+        price: "$30000",
+        category: "marketing"
     },
     {
         id: 6,
@@ -45,7 +50,8 @@ const coursesData = [
         img: "../img/matemati.png",
         alt: "curso matemáticas",
         title: "INTRODUCCIÓN AL QUEHACER MATEMÁTICO",
-        price: "$20000"
+        price: "$20000",
+        category: "otros"
     },
     {
         id: 7,
@@ -53,7 +59,8 @@ const coursesData = [
         img: "../img/ReparacionPc.png",
         alt: "curso Armado yreparación de Pc",
         title: "ARMADO Y REPARACIÓN DE PC",
-        price: "$40000"
+        price: "$40000",
+        category: "tecnica"
     },
 
     {
@@ -62,7 +69,8 @@ const coursesData = [
         img: "../img/metodologiasAgiles.png",
         alt: "curso metodologias agiles",
         title: "METODOLOGÍAS AGILES",
-        price: "$30000"
+        price: "$30000",
+        category: "otros"
     },
     {
         id: 9,
@@ -70,7 +78,8 @@ const coursesData = [
         img: "../img/photoshopIlustrator.png",
         alt: "curso photoshop e ilustrator",
         title: "PHOTOSHOP & ILUSTRATOR",
-        price: "$30000"
+        price: "$30000",
+        category: "diseno"
     },
     {
         id: 10,
@@ -78,7 +87,8 @@ const coursesData = [
         img: "../img/seguridadInformatica.png",
         alt: "curso seguridad informatica",
         title: "SEGURIDAD INFORMÁTICA",
-        price: "$50000"
+        price: "$50000",
+        category: "redes"
     },
     {
         id: 11,
@@ -86,7 +96,8 @@ const coursesData = [
         img: "../img/redes.png",
         alt: "curso redes",
         title: "REDES INFORMÁTICAS",
-        price: "$50000"
+        price: "$50000",
+        category: "redes"
     },
     {
         id: 12,
@@ -94,7 +105,8 @@ const coursesData = [
         img: "../img/emprendimientoDigital.png",
         alt: "curso EMPRENDIMIENTO DIGITAL",
         title: "EMPRENDIMIENTO DIGITAL",
-        price: "$20000"
+        price: "$20000",
+        category: "marketing"
     },
     {
         id: 13,
@@ -102,7 +114,8 @@ const coursesData = [
         img: "../img/algoritmos.png",
         alt: "curso algoritmos",
         title: "ALGORITMOS EN PROGRAMACIÓN",
-        price: "$20000"
+        price: "$20000",
+        category: "programacion"
     },
     {
         id: 14,
@@ -110,7 +123,8 @@ const coursesData = [
         img: "../img/php&laravel.png",
         alt: "curso php laravel",
         title: "PHP & LARAVEL",
-        price: "$50000"
+        price: "$50000",
+        category: "programacion"
     },
     {
         id: 15,
@@ -118,7 +132,8 @@ const coursesData = [
         img: "../img/dominaGitGithub.png",
         alt: "curso git y github",
         title: "DOMINA GIT Y GITHUB",
-        price: "$20000"
+        price: "$20000",
+        category: "programacion"
     },
 
 ];

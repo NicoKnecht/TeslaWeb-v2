@@ -51,23 +51,23 @@
             }
         }
     }
-    .licCardsWrapper {
-        text-align: center;
-        .licCardsTitle {
-            @media all and (max-width: 480px) {
-                font-size: 1.2rem;
-            }
-        }
-    }
-    .techCardsWrapper {
-        text-align: center;
-        .techCardsTitle {
-            @media all and (max-width: 480px) {
-                font-size: 1.2rem;
-            }
-        }
+    // .licCardsWrapper {
+    //     text-align: center;
+    //     .licCardsTitle {
+    //         @media all and (max-width: 480px) {
+    //             font-size: 1.2rem;
+    //         }
+    //     }
+    // }
+    // .techCardsWrapper {
+    //     text-align: center;
+    //     .techCardsTitle {
+    //         @media all and (max-width: 480px) {
+    //             font-size: 1.2rem;
+    //         }
+    //     }
      
-    }
+    // }
     .filterButtons {
         display: flex;
         flex-wrap: wrap;
@@ -83,7 +83,13 @@
                 width: 48%;
                 margin: 1% 0;
             }
+        
         }
+        // button.active {
+        //     background-color: $gral-magenta;
+        // }
+      
+  
     }
     .vermas{
         @include btn(1%, 1rem);
