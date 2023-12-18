@@ -11,7 +11,7 @@ const renderCourses = (coursesList) => {
 }
 
 const createCourseTemplate = (course) => {
-    const { id, link, img, alt, title, category } = course;
+    const { id, link, img, alt, title, category, price } = course;
     console.log(id);
     return `
     <div class="card" id=${id} href=${link}>
@@ -23,14 +23,15 @@ const createCourseTemplate = (course) => {
         ${title}
         </h3>
     </a>
+    <p class="cardPrice">Valor: ${price}</p>
     <button 
-    class="cardBtn" data-id='${id}'
-    data
-    data-link='${link}'
-    data-img='${img}'
-    data-alt='${alt}'
-    data-title='${title}'
-    data-category= '${category}'
+    class="cardBtn" data-id=${id}
+    data-link=${link}
+    data-img=${img}
+    data-alt=${alt}
+    data-title=${title}
+    data-category= ${category}
+    data-price = ${price}
     >Agregar al carrito
     </button>
 </div>

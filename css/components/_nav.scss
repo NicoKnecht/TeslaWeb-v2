@@ -234,10 +234,13 @@
                 right: 0;
                 background: linear-gradient(173deg, rgba(255, 255, 255, 1) 14%, rgba(176, 18, 235, 0.9) 100%);
                 width: 35%;
-                min-height: 98vh;
+                height: 98vh;
                 color: black;
                 padding: 2%;
                 border:1px solid $gral-violet;
+                z-index: 1000;   
+                overflow-y: auto;    
+    
                 @media all and (max-width: 768px) {
                    width: 60%;
                    }
@@ -276,14 +279,21 @@
                  
                     
                 }
-                .dropDown__item{
+                .dropDown__items{
+                    margin: 5% 0%;
+                    display: flex;
+                    flex-direction: column;
+                    // flex-wrap: wrap;
+                   
+                   
+                .item{
                         display: flex;
                         margin: 2% 3%;
                         border: 1px solid black;
                         border-radius: 5px;
                         background-color: white;
-                         //width: 100%;
-                
+                       
+                  
                     .item__img{
                         width: 50%;
                         margin: 1%;
@@ -292,12 +302,24 @@
                     .item__info{
                         display: flex;
                         flex-direction: column;
-                        margin: 2%;
-                       
+                        margin: 1%;
                         justify-content: center;
+                        width: 50%;
+                        font-size: 1.2vw;
+                        @media all and (max-width: 768px) {
+                            font-size: 2.3vw;
+                           }
+                           @media all and (max-width: 480px) {
+                            font-size:0.8rem;
+                           }
+                     
                         .item__title {
                             border-bottom: 1px solid $gral-violet;
                             padding: 0.5px 0px;
+                           
+                           
+                            // width: 100%;
+                    
                         }
                         .item__price {
                             display: block;
@@ -307,7 +329,7 @@
                         }
                     }
              
-             
+                }
                 }
                 .divider {
                     display: block;
@@ -337,6 +359,20 @@
                         font-size: 1.2rem;
                         border-radius: 5px;
                         cursor: pointer;
+                    }
+                    .btn__deleteAll{
+                        @extend.btn__add;
+                        color:gray;
+                    }
+                    .hidden{
+                        display:none;
+                    
+                    }
+                    .disable{
+                        background-color: gray;
+                        color: white;
+                        cursor:not-allowed;
+                        border: none;
                     }
                 }
     
@@ -412,4 +448,18 @@
             }
         }
     }
+    .message {
+        display: none;
+        position: fixed;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        z-index: 1;
+    }
 }
+
+

@@ -4,8 +4,10 @@
     margin: 5% 0%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-   
+    gap: 3rem;
+    @media screen and (min-width: 1440px) {
+        gap: 5rem;
+    }
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -68,11 +70,27 @@
                 }
             }
         }
+        .cardPrice{
+            background-color: black;
+            text-align: center;
+            font-size: 1.3vw;
+            @media screen and (max-width: 768px) {
+                font-size: 2vw;
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 3vw;
+            }
+        }
         .cardBtn{
             @include btn(1%, 1rem);
             border: 1px black solid;
             box-shadow: none;
             cursor: pointer;
+            @media screen and (min-width:1440px) {
+                font-size: 1.5vw;
+                padding: 1%;
+                
+            }
             @media screen and (max-width: 768px) {
                 font-size: 2.4vw;
                 padding: 1%;

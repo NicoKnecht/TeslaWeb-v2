@@ -62,7 +62,7 @@ const authenticateAccount = () => {
 }
 
 const showUserName = (name) => {
-    userNameElement.textContent = name;
+    userNameElement.textContent = "Hola, " + name;
 }
 
 const login = (e) => {
