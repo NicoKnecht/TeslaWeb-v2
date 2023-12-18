@@ -57,7 +57,11 @@ const openUser = () => {
 
 };
 
-
+// funcion para chequear si hay usuario logeado
+const isUserLoggedIn = () => {
+    const activeUser = getActiveUser();
+    return !!activeUser.name; // Devuelve true si el usuario está logueado, false de lo contrario
+}
 //template course cart
 const courseCartTemplate = (course) => {
     const { img, title, price, id } = course;
@@ -89,22 +93,24 @@ const renderCoursesCart = (cartList) => {
 const addCourse = (e) => {
     if (e.target.classList.contains("cardBtn")) {
         const course = e.target.dataset;
-        // agarro los dataset de la iNfo del curso que estan en el button
-        if (!isExistingCourse(course)) {
-            createCartCourse(course);//a grega a array
-            renderCoursesCart(cart);
-            showCartTotal();
-            disableBtn(buyCartBtn);
-            disableBtn(emptyCartBtn);
-            showMessage();
-            console.log("siii");
+        if (isUserLoggedIn()) { // Verifica si el usuario está logueado
+            if (!isExistingCourse(course)) {
+                createCartCourse(course);
+                renderCoursesCart(cart);
+                showCartTotal();
+                disableBtn(buyCartBtn);
+                disableBtn(emptyCartBtn);
+                showMessage();
+                console.log("Curso añadido al carrito");
+            }
+        } else {
 
+            console.log("Debes iniciar sesión para añadir cursos al carrito");
+            window.location.href = 'login.html';
         }
-
     }
-
-
 }
+
 const showMessage = () => {
     const message = document.getElementById('message');
     message.style.display = 'block';
