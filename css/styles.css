@@ -1140,8 +1140,9 @@ body .mainWrapper .brandsContainer .brandsWrapper .brands {
 }
 @media all and (max-width: 480px) {
   .mainContainer .vermas {
+    width: 100%;
     font-size: 0.8rem;
-    padding: 1px;
+    padding: 2px;
   }
 }
 .mainContainer .hidden {

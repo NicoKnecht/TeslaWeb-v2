@@ -97,8 +97,10 @@
         width: 45%;
         margin-top: 5%;
         @media all and (max-width: 480px) {
+            width:100% ;
             font-size: 0.8rem;
-            padding: 1px;
+            padding: 2px;
+          
         }
       
     }
